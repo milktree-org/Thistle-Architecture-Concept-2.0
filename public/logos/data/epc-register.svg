@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 100" fill="none">
+  <g font-family="'Inter', system-ui, sans-serif">
+    <text x="14" y="50" font-size="36" font-weight="700" fill="#2F3B36">EPC</text>
+    <text x="14" y="78" font-size="16" font-weight="500" fill="#71776E" letter-spacing="0.5">Register</text>
+  </g>
+  <g transform="translate(115,24)">
+    <rect x="0" y="0" width="34" height="14" fill="#00834A" />
+    <rect x="34" y="0" width="34" height="14" fill="#33A55B" />
+    <rect x="68" y="0" width="34" height="14" fill="#94C949" />
+    <rect x="102" y="0" width="34" height="14" fill="#F8DA00" />
+    <rect x="136" y="0" width="34" height="14" fill="#F89F2D" />
+    <rect x="170" y="0" width="34" height="14" fill="#EB6730" />
+    <rect x="204" y="0" width="34" height="14" fill="#D02226" />
+    <g font-family="'Inter', system-ui, sans-serif" font-size="10" font-weight="700" fill="#ffffff">
+      <text x="13" y="10">A</text>
+      <text x="47" y="10">B</text>
+      <text x="81" y="10">C</text>
+      <text x="115" y="10" fill="#2F3B36">D</text>
+      <text x="149" y="10">E</text>
+      <text x="183" y="10">F</text>
+      <text x="217" y="10">G</text>
+    </g>
+  </g>
+  <text x="115" y="60" font-family="'Inter', system-ui, sans-serif" font-size="11" fill="#71776E" letter-spacing="0.5">Energy Performance Certificates</text>
+</svg>

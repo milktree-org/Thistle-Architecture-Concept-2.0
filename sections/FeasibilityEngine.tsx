@@ -9,36 +9,41 @@ import { InlineCTA } from '../components/ui/InlineCTA';
 // so all six layers read with symmetric scale.
 
 // ─── Layer 01: Planning history ──────────
-const GraphicPlanning: React.FC = () => (
-  <div className="w-full h-full flex flex-col justify-center bg-white rounded-2xl border border-thistle-black/[0.06] shadow-sm shadow-thistle-black/[0.03] p-fl-6">
-    <div className="flex items-center justify-between mb-fl-4">
-      <span className="text-[10px] uppercase tracking-wider text-thistle-black/40 font-semibold">Planning history · 5 yrs</span>
-      <span className="text-[10px] text-thistle-green font-medium">8 approvals · 2 refusals</span>
+const GraphicPlanning: React.FC = () => {
+  const statusColor = (s: 'approved' | 'refused' | 'pending') =>
+    s === 'approved' ? 'bg-thistle-green' : s === 'refused' ? 'bg-red-400' : 'bg-amber-400';
+  return (
+    <div className="w-full h-full flex flex-col justify-center bg-white rounded-2xl border border-thistle-black/[0.06] shadow-sm shadow-thistle-black/[0.03] p-fl-6">
+      <div className="flex items-center justify-between mb-fl-4">
+        <span className="text-[10px] uppercase tracking-wider text-thistle-black/40 font-semibold">Local planning history · 5 years</span>
+        <span className="text-[10px] text-thistle-green font-medium">6 approved · 1 pending · 1 refused</span>
+      </div>
+      <div className="relative h-24">
+        <div className="absolute left-0 right-0 top-1/2 h-px bg-thistle-black/[0.08]" />
+        {([
+          { x: 8, status: 'approved', label: "2021" },
+          { x: 22, status: 'approved', label: "" },
+          { x: 35, status: 'refused', label: "2022" },
+          { x: 48, status: 'approved', label: "" },
+          { x: 60, status: 'approved', label: "2023" },
+          { x: 72, status: 'pending', label: "" },
+          { x: 84, status: 'approved', label: "2024" },
+          { x: 94, status: 'approved', label: "" },
+        ] as const).map((m, i) => (
+          <div key={i} className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2" style={{ left: `${m.x}%` }}>
+            <div className={`w-2 h-2 rounded-full ${statusColor(m.status)} ring-4 ring-white`} />
+            {m.label && <span className="absolute top-4 left-1/2 -translate-x-1/2 text-[9px] text-thistle-black/40">{m.label}</span>}
+          </div>
+        ))}
+      </div>
+      <div className="mt-fl-5 pt-fl-4 border-t border-thistle-black/[0.06] flex items-center gap-4 text-[10px] text-thistle-black/50">
+        <span className="inline-flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-thistle-green" />Approved</span>
+        <span className="inline-flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-amber-400" />Pending</span>
+        <span className="inline-flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-red-400" />Refused</span>
+      </div>
     </div>
-    <div className="relative h-24">
-      <div className="absolute left-0 right-0 top-1/2 h-px bg-thistle-black/[0.08]" />
-      {[
-        { x: 8, approved: true, label: "2021" },
-        { x: 22, approved: true, label: "" },
-        { x: 35, approved: false, label: "2022" },
-        { x: 48, approved: true, label: "" },
-        { x: 60, approved: true, label: "2023" },
-        { x: 72, approved: false, label: "" },
-        { x: 84, approved: true, label: "2024" },
-        { x: 94, approved: true, label: "" },
-      ].map((m, i) => (
-        <div key={i} className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2" style={{ left: `${m.x}%` }}>
-          <div className={`w-2 h-2 rounded-full ${m.approved ? 'bg-thistle-green' : 'bg-red-400'} ring-4 ring-white`} />
-          {m.label && <span className="absolute top-4 left-1/2 -translate-x-1/2 text-[9px] text-thistle-black/40">{m.label}</span>}
-        </div>
-      ))}
-    </div>
-    <div className="mt-fl-5 pt-fl-4 border-t border-thistle-black/[0.06] flex items-center gap-4 text-[10px] text-thistle-black/50">
-      <span className="inline-flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-thistle-green" />Approved</span>
-      <span className="inline-flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-red-400" />Refused</span>
-    </div>
-  </div>
-);
+  );
+};
 
 // ─── Layer 02: Local authority constraints ──────────
 const GraphicConstraints: React.FC = () => (
@@ -62,46 +67,59 @@ const GraphicConstraints: React.FC = () => (
 );
 
 // ─── Layer 03: Density & housing analysis ──────────
-const GraphicDensity: React.FC = () => (
-  <div className="w-full h-full flex flex-col justify-center bg-white rounded-2xl border border-thistle-black/[0.06] shadow-sm shadow-thistle-black/[0.03] p-fl-6">
-    <div className="mb-fl-4 flex items-center justify-between">
-      <span className="text-[10px] uppercase tracking-wider text-thistle-black/40 font-semibold">HMO saturation · 1km</span>
-      <span className="text-[10px] text-thistle-green font-medium">Under threshold</span>
-    </div>
-    <div className="grid grid-cols-12 gap-[2px] aspect-[12/6]">
-      {Array.from({ length: 72 }).map((_, i) => {
-        const row = Math.floor(i / 12);
-        const col = i % 12;
-        const dx = col - 5.5;
-        const dy = row - 2.5;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        const opacity = Math.max(0.05, 0.7 - dist * 0.1);
-        const isSite = row === 2 && col === 6;
-        return (
-          <div
-            key={i}
-            className={`rounded-[1px] ${isSite ? 'bg-thistle-black' : 'bg-thistle-green'}`}
-            style={{ opacity: isSite ? 1 : opacity }}
-          />
-        );
-      })}
-    </div>
-    <div className="mt-fl-4 pt-fl-3 border-t border-thistle-black/[0.06] grid grid-cols-3 gap-2 text-[10px]">
-      <div>
-        <div className="text-thistle-black/40 uppercase tracking-wider font-semibold text-[9px]">HMOs</div>
-        <div className="text-thistle-black font-semibold text-sm">18</div>
+const GraphicDensity: React.FC = () => {
+  // Indices on a 16-col × 10-row grid (160 cells). Site marker at row 4, col 8 → 4*16+8 = 72.
+  const SITE = 72;
+  const HMO_CELLS = new Set([3, 17, 28, 36, 49, 57, 65, 81, 94, 103, 118, 127, 134, 146]);
+  const FAMILY_CELLS = new Set([6, 11, 20, 25, 33, 41, 52, 60, 71, 83, 90, 98, 107, 113, 121, 137, 142, 151]);
+  return (
+    <div className="w-full h-full flex flex-col justify-center bg-white rounded-2xl border border-thistle-black/[0.06] shadow-sm shadow-thistle-black/[0.03] p-fl-6">
+      <div className="mb-fl-4 flex items-center justify-between">
+        <span className="text-[10px] uppercase tracking-wider text-thistle-black/40 font-semibold">HMO density · 1km</span>
+        <span className="text-[10px] text-red-500 font-medium">Over threshold</span>
       </div>
-      <div>
-        <div className="text-thistle-black/40 uppercase tracking-wider font-semibold text-[9px]">Threshold</div>
-        <div className="text-thistle-black font-semibold text-sm">25</div>
+      <div className="grid gap-[1.5px] aspect-[16/10]" style={{ gridTemplateColumns: 'repeat(16, minmax(0, 1fr))' }}>
+        {Array.from({ length: 160 }).map((_, i) => {
+          const row = Math.floor(i / 16);
+          const col = i % 16;
+          const dx = col - 7.5;
+          const dy = row - 4.5;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          const opacity = Math.max(0.08, 0.65 - dist * 0.06);
+          if (i === SITE) {
+            return (
+              <div
+                key={i}
+                className="rounded-[1px] bg-thistle-green ring-2 ring-thistle-black/80"
+                style={{ opacity: 1 }}
+              />
+            );
+          }
+          if (HMO_CELLS.has(i)) {
+            return <div key={i} className="rounded-[1px] bg-red-400" style={{ opacity: 0.85 }} />;
+          }
+          if (FAMILY_CELLS.has(i)) {
+            return <div key={i} className="rounded-[1px] bg-amber-300" style={{ opacity: 0.8 }} />;
+          }
+          return <div key={i} className="rounded-[1px] bg-thistle-green" style={{ opacity }} />;
+        })}
       </div>
-      <div>
-        <div className="text-thistle-black/40 uppercase tracking-wider font-semibold text-[9px]">Headroom</div>
-        <div className="text-thistle-green font-semibold text-sm">28%</div>
+      {/* Scale bar */}
+      <div className="mt-fl-3 flex items-center gap-2">
+        <div className="h-px bg-thistle-black/40 flex-1 max-w-[60px]" />
+        <span className="text-[9px] uppercase tracking-wider text-thistle-black/50 font-semibold">100m</span>
+      </div>
+      <div className="mt-fl-3 pt-fl-3 border-t border-thistle-black/[0.06] flex items-center justify-between gap-3 text-[10px]">
+        <div className="flex items-center gap-3 text-thistle-black/50">
+          <span className="inline-flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-[1px] bg-red-400" />HMO</span>
+          <span className="inline-flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-[1px] bg-amber-300" />Family</span>
+          <span className="inline-flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-[1px] bg-thistle-green" />Residential</span>
+        </div>
+        <span className="text-red-500 font-semibold">22 HMOs · over cap</span>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 // ─── Layer 04: Comparable schemes ──────────
 const GraphicComparables: React.FC = () => (
@@ -216,19 +234,19 @@ const rows = [
   {
     eyebrow: "Layer 01",
     title: "Planning history & policy analysis",
-    body: "We read five years of approvals and refusals around your site to pinpoint how local planning is actually trending, not what policy documents say.",
+    body: "We gather the planning history of your property and carry out an initial assessment of the site and its background, so you know exactly what has been approved, refused, or is pending nearby.",
     Graphic: GraphicPlanning,
   },
   {
     eyebrow: "Layer 02",
-    title: "Local authority constraints",
-    body: "Article 4 directions, conservation areas, licensing thresholds, flood zones: every constraint that could stop your scheme, surfaced before you buy.",
+    title: "Local Policy Analysis",
+    body: "We gather and analyse the relevant local and national planning policies, Building Regulations, and licensing requirements to help ensure the scheme is viable before progressing to subsequent stages, such as the initial sketch scheme. This means the key fundamentals are assessed and confirmed upfront, helping safeguard the project against technical or regulatory issues later in the process.",
     Graphic: GraphicConstraints,
   },
   {
     eyebrow: "Layer 03",
-    title: "Density & housing analysis",
-    body: "HMO saturation, housing demand, and local delivery targets. We tell you whether the numbers stack up before you waste a pre-app.",
+    title: "Targeted Policy Analysis",
+    body: "Following our policy review, we carry out targeted analysis into the specific constraints affecting the scheme. For HMOs and commercial conversions, this may include density analysis, change-of-use restrictions, and local planning thresholds. This helps us assess whether the proposal is likely to be viable and supportable before progressing further.",
     Graphic: GraphicDensity,
   },
   {
@@ -258,16 +276,16 @@ export const FeasibilityEngine: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-fl-section-sm max-w-2xl mx-auto">
           <Reveal>
-            <p className="text-xs uppercase tracking-[0.2em] text-thistle-green font-semibold mb-fl-4">The Feasibility Engine</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-thistle-green font-semibold mb-fl-4">Our Feasibility Engine</p>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="text-fluid-h2 font-medium tracking-tight leading-tight text-thistle-black mb-fl-4">
-              Six Data Layers.<br /><span className="text-thistle-green">One Clear Answer.</span>
+              What&apos;s Included<br /><span className="text-thistle-green">In Data Analysis?</span>
             </h2>
           </Reveal>
           <Reveal delay={0.15}>
             <p className="text-fluid-base text-thistle-black/80 leading-relaxed">
-              Every analysis cross-references authoritative data with architectural logic, surfacing risks, opportunities, and optimal layouts before you commit.
+              Hundreds of data points cross-referenced across trusted sources, so our architects can focus on intelligent layouts and clear recommendations.
             </p>
           </Reveal>
         </div>

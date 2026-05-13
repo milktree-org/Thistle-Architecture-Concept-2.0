@@ -9,9 +9,9 @@ import { useFeasibility } from '../components/feasibility/FeasibilityContext';
 import { ArrowUpRight } from 'lucide-react';
 
 const navLinks = [
-  { label: "Visibility Package", to: "/feasibility-package" },
+  { label: "Feasibility Package", to: "/feasibility-package" },
   { label: "How It Works", to: "/how-it-works" },
-  { label: "Our Work", to: "/case-studies" },
+  { label: "Case Studies", to: "/case-studies" },
   { label: "About", to: "/about" },
   { label: "Blog", to: "/blog" },
 ];

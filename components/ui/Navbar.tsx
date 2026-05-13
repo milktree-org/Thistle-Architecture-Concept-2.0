@@ -10,9 +10,9 @@ import { useFeasibility } from '../feasibility/FeasibilityContext';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 
 const navLinks = [
-  { label: "Visibility Package", path: "/feasibility-package" },
+  { label: "Feasibility Package", path: "/feasibility-package" },
   { label: "How It Works", path: "/how-it-works" },
-  { label: "Our Work", path: "/case-studies" },
+  { label: "Case Studies", path: "/case-studies" },
   { label: "About", path: "/about" },
 ];
 

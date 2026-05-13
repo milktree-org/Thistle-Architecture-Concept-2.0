@@ -21,8 +21,8 @@ const steps = [
   },
   {
     num: "03",
-    title: "Expert Call",
-    desc: "One of our expert team will reach out for an initial phone call to gather any further details needed.",
+    title: "Project Data Gathering Session",
+    desc: "An instant call with Jodi, our property expert, to gather the details we need and walk through your goals for the site.",
     icon: Phone,
   },
   {

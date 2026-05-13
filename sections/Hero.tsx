@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '../components/ui/Button';
-import { ArrowUpRight, Building2, FileText, LayoutGrid, PenTool, Send, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, Building2, FileText, PenTool, Send, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Reveal } from '../components/animations/Reveal';
 import { useFeasibility } from '../components/feasibility/FeasibilityContext';
@@ -19,7 +19,6 @@ const metrics = [
 const timeline = [
   { day: "Day 1", label: "Submit Details", icon: Send },
   { day: "Day 2", label: "Feasibility Assessment Report", icon: FileText },
-  { day: "Day 3", label: "Layouts and Massing", icon: LayoutGrid },
   { day: "Day 4", label: "Sketch Scheme", icon: PenTool },
   { day: "Day 5", label: "Feasibility Assessment Meeting", icon: CheckCircle2, isFinal: true },
 ];
@@ -54,7 +53,7 @@ export const Hero: React.FC = () => {
 
           <Reveal delay={0.2}>
             <p className="text-fluid-base text-thistle-black leading-relaxed font-light mb-fl-4 max-w-md">
-              Thistle combines data analysis with developer-led architecture to test schemes quickly and accurately.
+              Thistle specialises in unlocking value from existing buildings, combining data analysis with developer-led architecture to test schemes quickly and accurately.
             </p>
           </Reveal>
 
@@ -93,7 +92,10 @@ export const Hero: React.FC = () => {
                 <div className="w-2 h-2 rounded-full bg-thistle-green" />
                 <span className="text-xs font-semibold tracking-wide text-thistle-black/60 uppercase">Feasibility Report</span>
               </div>
-              <span className="text-xs text-thistle-black/30">5 days</span>
+              <div className="flex flex-col items-end leading-none">
+                <span className="text-[9px] uppercase tracking-wider text-thistle-green font-semibold mb-0.5">Guaranteed</span>
+                <span className="text-sm font-bold text-thistle-black">5 days</span>
+              </div>
             </div>
 
             {/* Property info row */}
@@ -109,18 +111,23 @@ export const Hero: React.FC = () => {
                   <span className="text-[10px] uppercase tracking-wider text-thistle-black/40 font-semibold">12 units</span>
                 </div>
               </div>
-              {/* Kaan — design lead avatar */}
-              <div className="flex flex-col items-center flex-shrink-0">
-                <Image
-                  src="/kaan.png"
-                  alt="Kaan, Design Lead"
-                  width={88}
-                  height={88}
-                  unoptimized
-                  priority
-                  className="w-11 h-11 rounded-full object-cover ring-2 ring-thistle-green/20"
-                />
-                <span className="text-[9px] text-thistle-black/50 mt-1 leading-none">Kaan</span>
+            </div>
+
+            {/* Architect intro */}
+            <div className="px-6 py-4 border-b border-thistle-black/[0.04] flex items-center gap-fl-4">
+              <Image
+                src="/kaan.png"
+                alt="Kaan, Design Lead"
+                width={120}
+                height={120}
+                unoptimized
+                priority
+                className="w-16 h-16 rounded-full object-cover ring-2 ring-thistle-green/20 flex-shrink-0"
+              />
+              <div className="flex-1 min-w-0">
+                <span className="block text-sm font-semibold text-thistle-black leading-tight">Kaan</span>
+                <span className="block text-[10px] uppercase tracking-wider text-thistle-green font-semibold mt-0.5">Your design lead</span>
+                <span className="block text-[11px] text-thistle-black/60 leading-snug mt-1">Bachelor of Architecture (BArch). Leads every feasibility from sketch scheme to sign-off.</span>
               </div>
             </div>
 

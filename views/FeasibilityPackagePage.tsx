@@ -147,7 +147,7 @@ export const FeasibilityPackagePage: React.FC = () => {
   return (
     <>
       <PageHero
-        label="Visibility Package"
+        label="Feasibility Package"
         heading="Complete Clarity Before You Commit."
         description="A structured feasibility study combining automated data analysis with architect-led design review — delivered with a clear Go/No-Go recommendation."
         variant="dark"
