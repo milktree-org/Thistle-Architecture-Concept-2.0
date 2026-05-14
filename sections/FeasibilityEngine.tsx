@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Reveal } from '../components/animations/Reveal';
+import { feasibilityLayers } from '../data/feasibilityLayers';
 import { motion } from 'framer-motion';
 import { InlineCTA } from '../components/ui/InlineCTA';
 
@@ -232,38 +233,38 @@ const GraphicLayout: React.FC = () => (
 // ─── Rows config ──────────
 const rows = [
   {
-    eyebrow: "Layer 01",
-    title: "Planning history & policy analysis",
+    eyebrow: feasibilityLayers[0].eyebrow,
+    title: feasibilityLayers[0].title,
     body: "We gather the planning history of your property and carry out an initial assessment of the site and its background, so you know exactly what has been approved, refused, or is pending nearby.",
     Graphic: GraphicPlanning,
   },
   {
-    eyebrow: "Layer 02",
-    title: "Local Policy Analysis",
+    eyebrow: feasibilityLayers[1].eyebrow,
+    title: feasibilityLayers[1].title,
     body: "We gather and analyse the relevant local and national planning policies, Building Regulations, and licensing requirements to help ensure the scheme is viable before progressing to subsequent stages, such as the initial sketch scheme. This means the key fundamentals are assessed and confirmed upfront, helping safeguard the project against technical or regulatory issues later in the process.",
     Graphic: GraphicConstraints,
   },
   {
-    eyebrow: "Layer 03",
-    title: "Targeted Policy Analysis",
+    eyebrow: feasibilityLayers[2].eyebrow,
+    title: feasibilityLayers[2].title,
     body: "Following our policy review, we carry out targeted analysis into the specific constraints affecting the scheme. For HMOs and commercial conversions, this may include density analysis, change-of-use restrictions, and local planning thresholds. This helps us assess whether the proposal is likely to be viable and supportable before progressing further.",
     Graphic: GraphicDensity,
   },
   {
-    eyebrow: "Layer 04",
-    title: "Comparable schemes",
+    eyebrow: feasibilityLayers[3].eyebrow,
+    title: feasibilityLayers[3].title,
     body: "Nearby conversions, achieved unit counts, and actual sale values. Benchmarks sourced automatically, not guessed from memory.",
     Graphic: GraphicComparables,
   },
   {
-    eyebrow: "Layer 05",
-    title: "GDV and viability",
+    eyebrow: feasibilityLayers[4].eyebrow,
+    title: feasibilityLayers[4].title,
     body: "Build cost modelling, margin analysis, and ROI projections. A clear view of whether the deal pencils before you commit capital.",
     Graphic: GraphicGDV,
   },
   {
-    eyebrow: "Layer 06",
-    title: "Spatial layout optimisation",
+    eyebrow: feasibilityLayers[5].eyebrow,
+    title: feasibilityLayers[5].title,
     body: "Architect-led layout options that maximise unit yield against space standards, daylight, and circulation. Validated, not estimated.",
     Graphic: GraphicLayout,
   },
