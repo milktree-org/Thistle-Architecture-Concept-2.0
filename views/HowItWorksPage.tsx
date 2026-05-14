@@ -1,61 +1,17 @@
 "use client";
 
 import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowUpRight } from 'lucide-react';
 import { PageHero } from '../components/ui/PageHero';
 import { Reveal } from '../components/animations/Reveal';
 import { Button } from '../components/ui/Button';
 import { useFeasibility } from '../components/feasibility/FeasibilityContext';
-import { motion } from 'framer-motion';
-import { ArrowUpRight, Upload, Search, PenTool, FileCheck } from 'lucide-react';
 import { FAQ } from '../sections/FAQ';
-
-const steps = [
-  {
-    num: "01",
-    icon: <Upload size={24} />,
-    title: "Submit Property Details",
-    detail: "Quick setup",
-    desc: "Upload floor plans, address, and your target unit mix. Our portal captures everything we need to start immediately.",
-    expanded: "You don't need detailed drawings — basic floor plans, an address, and your initial assumptions on unit count are enough. If you don't have floor plans, we can often source them from Land Registry or request them from the selling agent.",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    num: "02",
-    icon: <Search size={24} />,
-    title: "Automated Desk Study",
-    detail: "Automated",
-    desc: "We run constraints checks against planning policy, flood risk, daylight exposure, and local Article 4 directives.",
-    expanded: "Our automated systems cross-reference over 15 data sources including the local plan, planning portal history, Environment Agency flood maps, noise mapping, conservation area boundaries, and listed building registers. This surfaces constraints that manual research often misses.",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    num: "03",
-    icon: <PenTool size={24} />,
-    title: "Architect Review",
-    detail: "Expert-led",
-    desc: "A senior architect reviews the data, sketches the optimal layout, and solves complex spatial problems automation can't handle.",
-    expanded: "The architect pressure-tests the desk study findings against the physical building. They produce GA floor plans showing the proposed unit layout, calculate the efficiency ratio, and identify any structural or services challenges that could affect buildability or cost.",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    num: "04",
-    icon: <FileCheck size={24} />,
-    title: "Feasibility Delivered",
-    detail: "Final output",
-    desc: "A comprehensive report including GA plans, schedule of accommodation, risk register, and Go/No-Go recommendation.",
-    expanded: "Your report is a single, investor-ready document containing everything you need: GA floor plans, a detailed schedule of accommodation against NDSS standards, constraints analysis, risk register with cost implications, and an unambiguous Go or No-Go recommendation.",
-    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800",
-  },
-];
-
-const deliverables = [
-  { title: "GA Floor Plans", desc: "Proposed layouts showing unit positions, circulation, and core areas." },
-  { title: "Schedule of Accommodation", desc: "Unit-by-unit breakdown with GIA, room counts, and NDSS compliance." },
-  { title: "Constraints Analysis", desc: "Planning policy, flood risk, Article 4, conservation, and heritage assessment." },
-  { title: "Risk Register", desc: "Structural, environmental, and commercial risks quantified with cost implications." },
-  { title: "Go/No-Go Recommendation", desc: "A clear, unambiguous recommendation backed by evidence." },
-  { title: "Efficiency Metrics", desc: "Net-to-gross ratios, GDV estimates, and commercial viability indicators." },
-];
+import { StepRow } from '../sections/how-it-works/StepRow';
+import { stepGraphicMap, LayerMiniGraphic } from '../sections/how-it-works/stepGraphics';
+import { howItWorksSteps, deliverables, layerBlurbs } from '../data/howItWorksData';
+import { feasibilityLayers } from '../data/feasibilityLayers';
 
 export const HowItWorksPage: React.FC = () => {
   const { openModal } = useFeasibility();
@@ -64,94 +20,67 @@ export const HowItWorksPage: React.FC = () => {
     <>
       <PageHero
         label="How It Works"
-        heading="From Enquiry To Complete Clarity."
-        description="A structured, data-driven process that gives developers the confidence to bid, exchange, or walk away — fast."
+        heading="From Building To Go/No-Go, Step By Step."
+        description="A structured, data-driven process that gives developers the confidence to bid, exchange, or walk away. In five days."
         variant="dark"
       >
-        <Button variant="glass" icon={<ArrowUpRight size={16} />} onClick={openModal} className="!bg-thistle-green !text-black !border-thistle-green hover:!bg-thistle-green/80 hover:!border-thistle-green/80">
+        <Button
+          variant="glass"
+          icon={<ArrowUpRight size={16} />}
+          onClick={openModal}
+          className="!bg-thistle-green !text-black !border-thistle-green hover:!bg-thistle-green/80 hover:!border-thistle-green/80"
+        >
           Start Feasibility
         </Button>
       </PageHero>
 
-      {/* Expanded Steps */}
-      <section className="py-fl-section px-fl-margin bg-thistle-white">
+      {/* The 5-step narrative timeline */}
+      <section className="bg-thistle-white py-fl-section px-fl-margin">
         <div className="max-w-[1360px] mx-auto">
-          <div className="mb-fl-8">
+          <div className="text-center mb-fl-section-sm max-w-2xl mx-auto">
             <Reveal>
-              <p className="text-xs uppercase tracking-[0.2em] text-thistle-black/40 font-semibold mb-fl-5">The Process</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-thistle-green font-semibold mb-fl-4">The 5-Step Process</p>
             </Reveal>
             <Reveal delay={0.1}>
               <h2 className="text-fluid-h2 font-medium tracking-tight leading-tight text-thistle-black">
-                Four Steps. Five Days.
+                Every Step From Upload<br /><span className="text-thistle-green">To Clear Recommendation.</span>
               </h2>
             </Reveal>
           </div>
 
-          <div className="flex flex-col gap-fl-5">
-            {steps.map((step, i) => (
-              <Reveal key={i} delay={i * 0.1}>
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 rounded-2xl border border-thistle-black/[0.06] bg-white hover:border-thistle-black/[0.1] transition-colors overflow-hidden">
-                  <div className="lg:col-span-4 relative">
-                    <img
-                      src={step.image}
-                      alt={step.title}
-                      className="w-full h-full object-cover min-h-[200px] lg:min-h-0"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1.5 rounded-full bg-black/30 backdrop-blur-xl border border-white/10 text-[10px] uppercase tracking-widest text-white/80 font-bold">
-                        {step.num}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="lg:col-span-8 p-fl-6 flex flex-col justify-center">
-                    <div className="flex items-start gap-fl-4 mb-fl-4">
-                      <div className="w-10 h-10 rounded-xl bg-thistle-black/[0.03] flex items-center justify-center text-thistle-black/40 flex-shrink-0">
-                        {step.icon}
+          <div className="space-y-fl-section-sm">
+            {howItWorksSteps.map((step, i) => {
+              const Graphic = stepGraphicMap[step.graphic];
+              return (
+                <div key={step.num}>
+                  <StepRow step={step} reversed={i % 2 !== 0} graphicSlot={<Graphic />} />
+                  {step.graphic === 'step2' && (
+                    <Reveal delay={0.1}>
+                      <div className="mt-fl-7">
+                        <span className="text-[11px] uppercase tracking-[0.2em] text-thistle-green font-semibold">
+                          Inside the analysis: six data layers
+                        </span>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-fl-4 mt-fl-4">
+                          {feasibilityLayers.map((layer, idx) => (
+                            <div key={idx} className="bg-white rounded-xl border border-thistle-black/[0.06] p-fl-5">
+                              <LayerMiniGraphic index={idx} />
+                              <span className="block text-[10px] uppercase tracking-wider text-thistle-green font-semibold mt-fl-3">{layer.eyebrow}</span>
+                              <h4 className="text-fluid-h6 font-medium tracking-tight text-thistle-black mt-1">{layer.title}</h4>
+                              <p className="text-fluid-sm text-thistle-black/60 leading-relaxed mt-fl-2">{layerBlurbs[idx]}</p>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                      <div>
-                        <h3 className="text-fluid-h6 font-medium tracking-tight mb-0.5">{step.title}</h3>
-                        <span className="text-xs text-thistle-black/30 uppercase tracking-widest">{step.detail}</span>
-                      </div>
-                    </div>
-                    <p className="text-fluid-base text-thistle-black/80 leading-relaxed mb-fl-3">{step.desc}</p>
-                    <p className="text-sm text-thistle-black/35 leading-relaxed">{step.expanded}</p>
-                  </div>
+                    </Reveal>
+                  )}
                 </div>
-              </Reveal>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Visual Break */}
-      <section className="px-fl-margin bg-thistle-white pb-fl-4">
-        <div className="max-w-[1360px] mx-auto">
-          <Reveal>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-fl-4">
-              <div className="aspect-[16/10] rounded-2xl overflow-hidden">
-                <motion.img
-                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80"
-                  alt="Modern commercial building interior"
-                  className="w-full h-full object-cover"
-                  whileHover={{ scale: 1.03 }}
-                  transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
-                />
-              </div>
-              <div className="aspect-[16/10] rounded-2xl overflow-hidden">
-                <motion.img
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80"
-                  alt="Commercial building exterior"
-                  className="w-full h-full object-cover"
-                  whileHover={{ scale: 1.03 }}
-                  transition={{ duration: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
-                />
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* Deliverables */}
+      {/* What you receive */}
       <section className="py-fl-section px-fl-margin bg-thistle-black text-white">
         <div className="max-w-[1360px] mx-auto">
           <div className="mb-fl-8">
@@ -171,7 +100,7 @@ export const HowItWorksPage: React.FC = () => {
                 <motion.div
                   whileHover={{ y: -4 }}
                   transition={{ duration: 0.3 }}
-                  className="p-fl-5 rounded-xl border border-white/[0.06] bg-white/[0.03] hover:border-white/[0.12] hover:bg-white/[0.05] transition-all duration-500"
+                  className="p-fl-5 rounded-xl border border-white/[0.06] bg-white/[0.03] hover:border-white/[0.12] hover:bg-white/[0.05] transition-all duration-500 h-full"
                 >
                   <h3 className="text-fluid-h6 font-medium tracking-tight mb-fl-2">{item.title}</h3>
                   <p className="text-fluid-base text-white/80 leading-relaxed">{item.desc}</p>
@@ -182,21 +111,33 @@ export const HowItWorksPage: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Band */}
-      <section className="py-fl-section-sm px-fl-margin bg-thistle-white">
-        <div className="max-w-[1360px] mx-auto text-center">
+      {/* Closing CTA band — dark with a gradient treatment standing in for the
+          AI image background slot until generated imagery lands. The gradient
+          keeps it visually distinct from the flat-dark deliverables section. */}
+      <section className="relative py-fl-section px-fl-margin bg-thistle-black text-white overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-thistle-green/10 rounded-full blur-[120px]" />
+          <div className="absolute bottom-0 left-1/3 w-[400px] h-[400px] bg-thistle-pink/10 rounded-full blur-[110px]" />
+        </div>
+        <div className="max-w-[1360px] mx-auto text-center relative z-10">
           <Reveal>
-            <h2 className="text-fluid-h2 font-medium tracking-tight leading-tight text-thistle-black mb-fl-5">
+            <h2 className="text-fluid-h2 font-medium tracking-tight leading-tight mb-fl-5">
               Ready To Start?
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="text-fluid-base text-thistle-black/80 leading-relaxed max-w-md mx-auto mb-fl-6">
-              Submit your property details and we'll get back to you within 24 hours with a scope and fixed fee.
+            <p className="text-fluid-base text-white/80 leading-relaxed max-w-md mx-auto mb-fl-6">
+              Submit your property details and get a clear Go or No-Go in five days.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
-            <Button variant="primary" size="lg" icon={<ArrowUpRight size={18} />} onClick={openModal}>
+            <Button
+              variant="glass"
+              size="lg"
+              icon={<ArrowUpRight size={18} />}
+              onClick={openModal}
+              className="!bg-thistle-green !text-black !border-thistle-green hover:!bg-thistle-green/80 hover:!border-thistle-green/80"
+            >
               Start Feasibility
             </Button>
           </Reveal>
