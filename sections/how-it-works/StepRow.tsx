@@ -7,14 +7,15 @@ import type { HowItWorksStep } from '../../data/howItWorksData';
 interface StepRowProps {
   step: HowItWorksStep;
   reversed: boolean;
-  graphic: React.ReactNode;
+  graphicSlot: React.ReactNode;
+  delay?: number;
 }
 
 // One alternating full-width narrative row. Matches the homepage Feasibility
 // Engine's row structure: content on one side, graphic on the other, sides
 // swapping on every other row at the lg breakpoint.
-export const StepRow: React.FC<StepRowProps> = ({ step, reversed, graphic }) => (
-  <Reveal>
+export const StepRow: React.FC<StepRowProps> = ({ step, reversed, graphicSlot, delay = 0 }) => (
+  <Reveal delay={delay}>
     <div className={`grid grid-cols-1 lg:grid-cols-2 gap-fl-8 items-center ${reversed ? 'lg:[&>*:first-child]:order-2' : ''}`}>
       <div className={reversed ? 'lg:pl-fl-5' : ''}>
         <span className="text-[11px] uppercase tracking-[0.2em] text-thistle-green font-semibold">
@@ -31,7 +32,7 @@ export const StepRow: React.FC<StepRowProps> = ({ step, reversed, graphic }) => 
         </p>
       </div>
       <div className={`w-full ${reversed ? '' : 'lg:order-2'}`}>
-        {graphic}
+        {graphicSlot}
       </div>
     </div>
   </Reveal>
