@@ -25,3 +25,6 @@ next-env.d.ts
 *.sln
 *.sw?
 .vercel
+
+# Responsive sweep output (regenerable, never source)
+/screenshots/

@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "sweep": "node scripts/responsive-sweep.mjs",
+    "find-overflow": "node scripts/find-overflow.mjs",
+    "probe": "node scripts/probe-panel.mjs"
   },
   "dependencies": {
     "framer-motion": "^11.18.2",
@@ -21,6 +24,7 @@
     "@types/react": "^18.3.28",
     "@types/react-dom": "^18.3.7",
     "autoprefixer": "^10.5.0",
+    "playwright": "^1.60.0",
     "postcss": "^8.5.10",
     "tailwindcss": "^3.4.19",
     "typescript": "~5.8.2"
