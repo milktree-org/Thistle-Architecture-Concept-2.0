@@ -31,6 +31,7 @@ async function run() {
     return overs.sort((a, b) => a.width - b.width).slice(0, 30);
   }, VP_WIDTH);
   console.log(JSON.stringify(offenders, null, 2));
+  await ctx.close();
   await browser.close();
 }
 
