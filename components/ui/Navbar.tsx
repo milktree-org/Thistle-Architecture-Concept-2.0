@@ -7,13 +7,27 @@ import { Button } from './Button';
 import { ThistleLogo } from './ThistleLogo';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 import { useFeasibility } from '../feasibility/FeasibilityContext';
-import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { ArrowUpRight, Menu, X, ChevronDown } from 'lucide-react';
 
-const navLinks = [
+interface NavItem {
+  label: string;
+  path: string;
+  children?: { label: string; path: string }[];
+}
+
+const navLinks: NavItem[] = [
   { label: "Feasibility Package", path: "/feasibility-package" },
   { label: "How It Works", path: "/how-it-works" },
   { label: "Case Studies", path: "/case-studies" },
-  { label: "About", path: "/about" },
+  {
+    label: "Conversions",
+    path: "/conversions/commercial-to-residential",
+    children: [
+      { label: "Commercial to Residential", path: "/conversions/commercial-to-residential" },
+      { label: "Office to Resi (Class MA)", path: "/conversions/office-to-resi-class-ma" },
+      { label: "HMO", path: "/conversions/hmo" },
+    ],
+  },
 ];
 
 export const Navbar: React.FC = () => {
@@ -71,15 +85,44 @@ export const Navbar: React.FC = () => {
 
           {/* Centre: Nav Links */}
           <div className="hidden lg:flex items-center justify-center gap-fl-6 text-fluid-sm font-medium text-white/80">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                href={link.path}
-                className={`transition-colors hover:text-white ${pathname.startsWith(link.path) ? 'text-white' : ''}`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              if (link.children) {
+                const active = link.children.some((ch) => pathname.startsWith(ch.path));
+                return (
+                  <div key={link.path} className="relative group">
+                    <Link
+                      href={link.path}
+                      className={`inline-flex items-center gap-1 transition-colors hover:text-white ${active ? 'text-white' : ''}`}
+                    >
+                      {link.label}
+                      <ChevronDown size={14} className="transition-transform duration-200 group-hover:rotate-180" />
+                    </Link>
+                    <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 hidden group-hover:block">
+                      <div className="bg-thistle-black border border-white/10 rounded-xl py-2 min-w-[260px] shadow-lg shadow-black/30">
+                        {link.children.map((child) => (
+                          <Link
+                            key={child.path}
+                            href={child.path}
+                            className={`block px-fl-4 py-fl-3 text-sm transition-colors hover:bg-white/[0.05] hover:text-white ${pathname === child.path ? 'text-white' : 'text-white/70'}`}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+              return (
+                <Link
+                  key={link.path}
+                  href={link.path}
+                  className={`transition-colors hover:text-white ${pathname.startsWith(link.path) ? 'text-white' : ''}`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </div>
 
           {/* Right: CTA + Mobile Toggle */}
@@ -121,14 +164,29 @@ export const Navbar: React.FC = () => {
             <div className="flex flex-col flex-1">
               <div className="flex flex-col gap-1">
                 {navLinks.map((link) => (
-                  <Link
-                    key={link.path}
-                    href={link.path}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className={`py-3 px-3 rounded-lg text-lg font-medium border-b border-thistle-black/5 last:border-b-0 ${pathname.startsWith(link.path) ? 'text-thistle-green' : 'text-thistle-black'}`}
-                  >
-                    {link.label}
-                  </Link>
+                  <div key={link.path} className="border-b border-thistle-black/5 last:border-b-0">
+                    <Link
+                      href={link.path}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`block py-3 px-3 rounded-lg text-lg font-medium ${pathname.startsWith(link.path) || (link.children && link.children.some((ch) => pathname.startsWith(ch.path))) ? 'text-thistle-green' : 'text-thistle-black'}`}
+                    >
+                      {link.label}
+                    </Link>
+                    {link.children && (
+                      <div className="flex flex-col pl-fl-5 pb-fl-2">
+                        {link.children.map((child) => (
+                          <Link
+                            key={child.path}
+                            href={child.path}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className={`py-2 text-sm ${pathname === child.path ? 'text-thistle-green' : 'text-thistle-black/70'}`}
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ))}
               </div>
             </div>
