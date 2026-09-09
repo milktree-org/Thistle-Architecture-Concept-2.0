@@ -43,6 +43,9 @@ interface CheckoutBody extends DisclaimerAcceptance {
   name?: string;
   phone?: string;
   address?: string;
+  /** The calculator's two use answers, as typed on screen. For the paid notification only. */
+  existingUse?: string;
+  proposedUse?: string;
 }
 
 async function createSession(form: URLSearchParams, key: string) {
@@ -183,6 +186,11 @@ export async function POST(request: Request) {
     'metadata[payment_type]': 'deposit_50',
     'metadata[address]': (body.address ?? '').slice(0, 490),
     'metadata[name]': (body.name ?? '').slice(0, 200),
+    // Was missing here while the automated tier above had it, so every
+    // deposit notification arrived with no phone number.
+    'metadata[phone]': (body.phone ?? '').slice(0, 60),
+    'metadata[existing_use]': (body.existingUse ?? '').slice(0, 200),
+    'metadata[proposed_use]': (body.proposedUse ?? '').slice(0, 200),
   });
   if (body.email) form.set('customer_email', body.email);
 

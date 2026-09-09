@@ -214,6 +214,13 @@ export const FeasibilityCalculator: React.FC = () => {
           project: toProject(a),
           email: a.email,
           name: a.name,
+          // The phone number and the two use answers were collected here and
+          // then dropped on the floor: the paid notification arrived with
+          // Phone blank and nothing saying what the scheme was (8 September
+          // 2026, first live deposit). They ride into the Stripe metadata now.
+          phone: a.phone,
+          existingUse: a.existingUse,
+          proposedUse: a.proposedUse,
           // Sent so the request records which wording was on screen, rather
           // than which wording happens to be deployed when it arrives.
           disclaimerAccepted: true,

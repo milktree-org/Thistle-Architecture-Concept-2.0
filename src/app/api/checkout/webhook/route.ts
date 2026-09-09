@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { buildCheckoutNotification } from '@/lib/checkoutNotification';
 import { createHmac, timingSafeEqual } from 'node:crypto';
 
 export const runtime = 'nodejs';
@@ -77,38 +78,8 @@ export async function POST(request: Request) {
   }
 
   const session = (event.data?.object ?? {}) as Record<string, any>;
-  const meta = (session.metadata ?? {}) as Record<string, string>;
-  const amount = typeof session.amount_total === 'number' ? session.amount_total / 100 : null;
-  // Since Ed's August 2026 final brief, the Architectural Feasibility charges a
-  // 50% holding deposit rather than the full fee, and the Automated Site
-  // Feasibility charges its flat £49.99 in full. The metadata says which, so an
-  // older full-fee architectural session paid late still reports correctly.
-  const isDeposit = meta.payment_type === 'deposit_50';
-  const isAutomated = meta.payment_type === 'automated_full';
-
-  const payload = {
-    _subject: isAutomated
-      ? `PAID Automated Site Feasibility: ${meta.name || 'name not captured'} (£${amount ?? '?'})`
-      : `PAID feasibility ${isDeposit ? 'deposit' : ''}: ${meta.address || meta.name || 'not captured'} (£${amount ?? '?'})`,
-    Status: isAutomated
-      ? 'Paid in full, awaiting detailed brief. No design review at this tier.'
-      : isDeposit
-        ? 'Deposit paid, awaiting detailed brief. Balance due before delivery.'
-        : 'Paid, awaiting project setup',
-    Amount: amount === null ? 'unknown' : `£${amount}`,
-    'Fixed fee (total)': meta.fee_total ? `£${meta.fee_total}` : '',
-    'Balance due': isDeposit && amount !== null && meta.fee_total ? `£${Number(meta.fee_total) - amount}` : '',
-    Email: session.customer_details?.email ?? session.customer_email ?? '',
-    Name: session.customer_details?.name ?? meta.name ?? '',
-    Phone: meta.phone ?? '',
-    Address: meta.address ?? '',
-    'Floor area': meta.gia ? `${meta.gia} m²` : '',
-    'Base fee': meta.base ? `£${meta.base}` : '',
-    'Complexity uplift': meta.uplift ? `£${meta.uplift}` : '',
-    'Complexity factors': meta.factors ?? '',
-    'Stripe session': session.id ?? '',
-    'Paid at': new Date().toISOString(),
-  };
+  // Built in lib/checkoutNotification.ts so it can be tested without Stripe.
+  const payload = buildCheckoutNotification(session);
 
   try {
     const res = await fetch(FEASIBILITY_ENDPOINT, {

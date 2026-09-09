@@ -19,7 +19,8 @@
     "test:analytics": "node scripts/test-analytics.mjs",
     "test:clarity": "node scripts/test-clarity-live.mjs",
     "test:disclaimer": "node scripts/test-disclaimer.mjs",
-    "formspree:deploy": "node scripts/formspree-deploy.mjs"
+    "formspree:deploy": "node scripts/formspree-deploy.mjs",
+    "test:notification": "node scripts/test-checkout-notification.mjs"
   },
   "dependencies": {
     "@tinacms/cli": "^2.6.1",
