@@ -9,11 +9,13 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      // /admin is the CMS editor, a static SPA with no content of its own. It
-      // is not in the sitemap, but a crawler can still reach a URL it finds
-      // anywhere, and an indexed admin URL is noise at best. Disallowing it
-      // keeps the crawlable surface exactly the set of real pages.
-      disallow: '/admin',
+      // /admin, the CMS editor, is deliberately NOT disallowed here any more.
+      // It was, and Search Console reported it on 6 September 2026 as
+      // "Indexed, though blocked by robots.txt": Google had found the URL,
+      // could not crawl it, and indexed it blind. A robots block hides the
+      // content but not the address. The fix is the opposite: let it be
+      // crawled and serve a noindex header (next.config.ts), which Google can
+      // only obey if it is allowed to fetch the page.
     },
     sitemap: 'https://www.thistlearchitecture.co.uk/sitemap.xml',
   };

@@ -380,6 +380,21 @@ const nextConfig: NextConfig = {
     ];
   },
 
+  // /admin is the CMS editor. See src/app/robots.ts for why it is crawlable
+  // and noindexed rather than blocked.
+  async headers() {
+    return [
+      {
+        source: '/admin/:path*',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
+      {
+        source: '/admin',
+        headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+      },
+    ];
+  },
+
   images: {
     // Media is repo-based (see tina/config.ts): editors upload into
     // public/images/uploads and what gets committed is a relative
