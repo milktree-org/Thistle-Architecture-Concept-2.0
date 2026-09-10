@@ -6,7 +6,8 @@
   "desc": "A new home on a vacant corner plot, bookending an existing Hackney terrace behind a curved wall of green glazed brick.",
   "image": {
     "src": "/images/projects/corner-house/cgi-street.jpg",
-    "kind": "drawing"
+    "kind": "drawing",
+    "caption": "Visualisation"
   },
   "buildingType": "New-build house on an infill plot",
   "projectStory": {

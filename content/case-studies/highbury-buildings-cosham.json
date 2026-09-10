@@ -6,7 +6,8 @@
   "desc": "The end of a 1930s terrace, converted from commercial and storage space into ten en-suite co-living rooms with shared amenity on every floor.",
   "image": {
     "src": "/images/projects/highbury/cgi-front.jpg",
-    "kind": "drawing"
+    "kind": "drawing",
+    "caption": "Visualisation"
   },
   "buildingType": "1930s commercial building",
   "galleryImages": [

@@ -37,7 +37,7 @@ import { str, num, arr, pruneEmpty, normalizeImage } from '../lib/tina';
 const TRUST_MARKER_ICONS = [CheckCircle2, Clock, ShieldCheck];
 
 const TRUST_MARKERS_FALLBACK = [
-  "98.5% planning success rate",
+  "500+ projects delivered nationwide",
   "five-day turnaround, committed",
   "Fixed fee, scoped up front",
 ];

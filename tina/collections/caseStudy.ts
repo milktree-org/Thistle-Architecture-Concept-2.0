@@ -147,6 +147,13 @@ export const caseStudyCollection: Collection = {
         { type: 'image', name: 'src', label: 'Image' },
         {
           type: 'string',
+          name: 'caption',
+          label: 'Caption',
+          description:
+            'A short line under the main image. Used for "Visualisation" on the pages whose main image is a CGI of a building not yet built (Ed, 9 September 2026), so a reader is not shown a render as a photograph. Leave empty for a photograph or a drawing.',
+        },
+        {
+          type: 'string',
           name: 'kind',
           label: 'How to fit it',
           options: [

@@ -23,7 +23,7 @@ const genericFaqs: FaqItem[] = [
   },
   {
     question: "How accurate is the data analysis?",
-    answer: "Our system cross-references 15+ authoritative data sources including planning portals, Land Registry, Environment Agency, and local authority records. Every automated analysis is then validated by a qualified designer. Our planning success rate is 98.5%.",
+    answer: "Our system cross-references 15+ authoritative data sources including planning portals, Land Registry, Environment Agency, and local authority records. Every automated analysis is then validated by a qualified designer.",
   },
   {
     question: "What if planning is refused?",

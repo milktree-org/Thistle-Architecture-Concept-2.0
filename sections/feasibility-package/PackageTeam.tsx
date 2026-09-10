@@ -66,8 +66,8 @@ const HEADER_FALLBACK = {
 // than borrowing HMO Designers' own project-count figures, which are a
 // different business's numbers.
 const PROOF_POINTS_FALLBACK = [
-  'Hundreds of conversions designed, nationwide',
-  '98.5% planning success rate',
+  '350+ HMO conversions designed, across the group',
+  '500+ projects delivered nationwide',
   'Commercial, HMO, co-living and high-end residential',
 ];
 

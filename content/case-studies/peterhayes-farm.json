@@ -6,7 +6,8 @@
   "desc": "An agricultural barn on a working farm in Somerset, converted to a house under Class Q and delivered through to completion.",
   "image": {
     "src": "/images/projects/peterhayes/cgi-barn.jpg",
-    "kind": "drawing"
+    "kind": "drawing",
+    "caption": "Visualisation"
   },
   "buildingType": "Agricultural barn",
   "projectStory": {

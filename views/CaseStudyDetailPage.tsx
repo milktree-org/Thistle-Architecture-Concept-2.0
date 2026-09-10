@@ -177,6 +177,9 @@ export const CaseStudyDetailPage: React.FC<CaseStudyDetailPageProps> = ({ page }
 
   const image = normalizeImage(cms?.image?.src, fallback?.image ?? '');
   const imageKind = str(cms?.image?.kind) || undefined;
+  // Item 38: "Visualisation" under a hero that is a CGI, so nobody reads a
+  // render as a photograph. Empty for a real photograph or a drawing.
+  const imageCaption = str(cms?.image?.caption);
 
   const isProject = kind === 'project';
   const backHref = isProject ? '/case-studies/completed-projects' : '/case-studies/feasibility-studies';
@@ -405,6 +408,11 @@ export const CaseStudyDetailPage: React.FC<CaseStudyDetailPageProps> = ({ page }
               {/* alt is the title, so it stays correct on its own when the
                   title is edited and needs no field of its own. */}
               <Frame src={image} alt={title} kind={imageKind} tina={f(cms?.image, 'src')} />
+              {imageCaption && (
+                <p className="text-xs text-thistle-black/50 mt-fl-2 text-right" data-tina-field={f(cms?.image, 'caption')}>
+                  {imageCaption}
+                </p>
+              )}
             </Reveal>
           </div>
         </div>

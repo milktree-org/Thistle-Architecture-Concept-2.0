@@ -119,9 +119,12 @@ interface Stat {
 // exact number. The field description repeats the standard in the editor: only
 // a figure that could be evidenced if a client asked.
 const STATS_FALLBACK: Stat[] = [
-  { value: "98.5%", label: "Planning success rate" },
+  // Ed's group figures (30 August 2026): 500+ projects and 350+ HMO
+  // conversions across the Thistle Group, HMO Designers included. The 98.5%
+  // planning figure came off at his request the same day.
+  { value: "500+", label: "Projects delivered nationwide" },
   { value: "5 days", label: "Turnaround, committed" },
-  { value: "Hundreds", label: "Of conversions designed nationwide" },
+  { value: "350+", label: "HMO conversions designed" },
 ];
 
 interface Theme {

@@ -6,7 +6,8 @@
   "desc": "A tired 1930s detached house in Winchester, reworked with new extensions and a full fenestration change.",
   "image": {
     "src": "/images/projects/bereweeke-1.jpg",
-    "kind": "drawing"
+    "kind": "drawing",
+    "caption": "Visualisation"
   },
   "buildingType": "1930s detached house (C3)",
   "galleryImages": [

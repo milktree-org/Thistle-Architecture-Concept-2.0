@@ -62,7 +62,7 @@ const HERO_FALLBACK: HeroCopy = {
 const HOME_PRICE_LINE = 'Feasibility from £49.99. Design-led feasibility from £298.';
 
 const METRICS_FALLBACK: HeroMetric[] = [
-  { value: "98.5%", label: "Planning success rate", detail: "Across all submitted schemes" },
+  { value: "500+", label: "Projects delivered", detail: "Across the Thistle Group" },
   { value: "5 days", label: "Turnaround, committed", detail: "Submission to recommendation" },
   { value: "86%", label: "Faster than traditional routes", detail: "5 days vs 2 to 6 weeks" },
 ];

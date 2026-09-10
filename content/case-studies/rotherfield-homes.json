@@ -6,7 +6,8 @@
   "desc": "A single large plot assessed for capacity, then masterplanned and consented as four new homes through a phased planning strategy.",
   "image": {
     "src": "/images/projects/rotherfield/cgi.jpg",
-    "kind": "drawing"
+    "kind": "drawing",
+    "caption": "Visualisation"
   },
   "buildingType": "Residential plot with existing dwelling",
   "projectStory": {

@@ -6,7 +6,8 @@
   "desc": "A bungalow on a corner plot, reworked internally and extended into a gable-ended house with vaulted ceilings over the open-plan heart.",
   "image": {
     "src": "/images/projects/boyne-rise/cgi-1.jpg",
-    "kind": "drawing"
+    "kind": "drawing",
+    "caption": "Visualisation"
   },
   "buildingType": "Existing bungalow",
   "projectStory": {
