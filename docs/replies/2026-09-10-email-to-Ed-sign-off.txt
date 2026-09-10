@@ -1,20 +1,33 @@
-Subject: Thistle sign-off: items 56 to 112 attached, and what is left on each side
+Subject: Re: Final website updates & feasibility journey
 
 Hi Ed,
 
-Attached is the point by point update on items 56 to 112, using your numbers. 48 are done and live, 6 are done as far as we can take them and need one answer from you, 2 wait on you entirely, 1 needs no action by your note. Everything marked done has been checked on the live site. Where a row needs something from you, it says exactly what.
+Thanks for both replies. Everything you decided that could be done without the attachment is live as of today. By number:
 
-You mentioned on Tuesday that you still owe your comments on the Thistle site before the codebase comes across. Can you send those this week, against the item numbers where they apply, and we will close them in one pass.
+84, 85, 20: Portsmouth, Exmoor National Park, Crawley (West Sussex).
+92: form emails now go to hello@thistlearchitecture.co.uk. One correction to what I told you on Saturday: the checker addresses since 18 August were not lost. The form route has had a fallback to the shared leads form since 18 August, so every one of them arrived in the inbox labelled "Class MA eligibility checker". What they did not get was the automatic checklist email, which they get now.
+32 and the cards: Windmill Lane no longer shows the end value or the flood line, and bedroom counts and communal sizes are off every feasibility card.
+58: section 8 now reads "limited in aggregate to the fees you paid us for that report", with the PI limit at £1,000,000. Note that the template wording was "the greater of a fixed sum and ten times the fee", so your cap is lower than the template's. That is your call and it is done as you said; say if you want the ten-times wording back.
+62: Southgate reads "Shop partially retained". The other three already matched.
+65, 16, 37: the page is now Projects. Every card carries a stage, set exactly as you listed, and the stage is a dropdown in the CMS (Complete, On site, Consented, At tender, In planning) so you set it yourself from here.
+66: Greyfriars November 2025, Southgate October 2025, Beechmount off the site.
+79 and 26: Axis House and Greyfriars read Go.
+86 and 41: byline on Bishopstoke Road, 81 The Crescent and George Street, off Millbrook Road.
+98 and 29: Kaan Taskin, Jan Kercher, Seyma Dilber.
+21, 22, 23, 24: 2024 on the ten you listed, bedrooms on the three, the £2.1M off Millbrook, two sketch proposals at Axis House.
+31: Forest Home now goes to Forest House. Axis House also sits under Projects as In planning. The Eastleigh HMO photographs are the George Street kitchen (same units, worktop, rooflights and dining set), so that page is merged into George Street and the old address redirects.
+35 and 36: Harpenden describes the client as a prospective purchaser. Southgate is "Southgate, Winchester". We only hold the ten-bed sketch, so if you want the nine-bed scheme shown alongside it, send that drawing.
 
-On the rest of your 2 September list, so we both know where it stands:
+Two things I need from you:
 
-1. Casino spam. All five URLs, including /home-2-0/ and /signup-2-0/, return 410 on hmodesigners.co.uk and have done since 2 September. Re-checked today. The removal requests in Search Console are the last step and need the Thistle Search Console property, which is item 3 below.
-2. Root cause note for the June hack. Sent to you on 2 September as a PDF on the "Everything open between us" thread. Say if it needs anything more.
-3. GA4 and Search Console ownership. Still waiting on the Google account. Sign up thistleanalytics@gmail.com to Google Analytics and tell me it is done, and I will move the property into it (history and Measurement ID kept, 48 hours, one way) and set up the Search Console properties under the same account with us as read and edit.
-4. Legal entity, the protected title and the Stripe prices. All three done. The footer, privacy and terms name Incollective Limited; the title is gone from every page; the Stripe charge is computed from the same fee engine as the page and is labelled VAT inclusive. If you still see a mismatch anywhere, send me the page and the amount.
-5. HMO Designers deploy and handover. Answered yesterday. Your figures are live. Once you have the Thistle GitHub organisation and Vercel account, I will move the repo, Vercel and Tina Cloud across in that order.
+1. The attachment did not come through. Your 9 September email arrived with only the signature images, so I do not have the Decision sections for 66, the Greyfriars rewrite, the cost figures for 93 or the three bios. Can you resend it.
+2. The GA4 move still needs thistleanalytics@gmail.com signed up to Google Analytics. Tell me when it is and I will move the property and set Search Console up under it the same day.
 
-One check from our side: on 3 September you sent a screenshot of the Tina editor not loading for you. Is that now working on both sites, or only on HMO Designers?
+Three that are not a yes or no:
+
+34: leads into GoHighLevel with an opportunity per paid feasibility needs the Thistle sub-account and an API key, which sits with the CRM transfer Levi is arranging. Once that exists it is a day's work.
+43: most of the fields on your list are already editable in the CMS (card stats, key facts, page titles, meta descriptions, images, alt text, the byline, the outcome chip, dates, and now the stage). Your 3 September screenshot showed the editor not loading at all, which reads as an access problem rather than missing fields. Can you send a fresh screenshot of what you see at thistlearchitecture.co.uk/admin today and we will get to the bottom of it.
+46 and 47: the twelve project pages move onto the template as soon as you send the write-ups for them, and the chatbot is a new piece of work to scope separately.
 
 Best,
 Akash

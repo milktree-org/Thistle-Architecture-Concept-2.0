@@ -37,7 +37,10 @@ import { str, num, arr, normalizeImage } from '@/lib/tina';
  * card for, and a project, or a study not yet on the template, still uses the
  * figures typed for it.
  */
-const CARD_SKIP = new Set(['planning route', 'date', 'key risk']);
+// Bedrooms and communal space are off the cards at Ed's request (30 August
+// 2026): a bedroom count and a room size on a card, with the street in the
+// address, is enough to identify a live purchase.
+const CARD_SKIP = new Set(['planning route', 'date', 'key risk', 'bedrooms', 'communal space', 'communal amenity']);
 const cardStats = (n: any): { label: string; value: string }[] => {
   const keyInfo = arr<any>(n.feasibility?.keyInfo)
     .map((k) => ({ label: str(k?.label), value: str(k?.value) }))
@@ -112,6 +115,7 @@ export const getCaseStudies = cache(async (): Promise<CaseStudy[]> => {
         conversionTypes: arr<string>(n.listing?.conversionTypes) as ConversionType[],
         recommendation: (str(n.listing?.recommendation) || undefined) as CaseStudy['recommendation'],
         status: (str(n.listing?.status) || undefined) as CaseStudy['status'],
+        alsoProject: n.listing?.alsoProject === true,
         challenge: str(n.writeup?.challenge) || undefined,
         approach: str(n.writeup?.approach) || undefined,
         outcome: str(n.writeup?.outcome) || undefined,
@@ -125,9 +129,13 @@ export const getCaseStudies = cache(async (): Promise<CaseStudy[]> => {
     .sort((a, b) => (a as any).order - (b as any).order);
 });
 
-/** Completed projects, in the order the listing shows them. */
+/**
+ * The Projects list, in the order the listing shows them: every completed
+ * project, plus any study flagged to appear here because its scheme has moved
+ * on (Axis House, in planning since March 2026).
+ */
 export const getCompletedProjects = cache(async () =>
-  (await getCaseStudies()).filter((c) => c.kind === 'project')
+  (await getCaseStudies()).filter((c) => c.kind === 'project' || c.alsoProject)
 );
 
 /**

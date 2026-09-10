@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const l = listing.data.listings;
 
   return {
-    title: l?.metaTitle || 'Completed Projects',
+    title: l?.metaTitle || 'Projects',
     description:
       l?.metaDescription ||
       'Conversions and schemes delivered through to completion across the Thistle Group, filterable by conversion type.',

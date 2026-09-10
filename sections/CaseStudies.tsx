@@ -28,7 +28,12 @@ const UnitComparison: React.FC<{ before: string; after: string; noGo?: boolean }
   </div>
 );
 
-export const CaseCard: React.FC<{ item: CaseStudy }> = ({ item }) => {
+/**
+ * `stage` says which list the card sits in. In the Projects list every card,
+ * including a study that also appears there (Axis House), carries its stage;
+ * in the studies list a study carries its Go / No-Go / Options Tested chip.
+ */
+export const CaseCard: React.FC<{ item: CaseStudy; stage?: boolean }> = ({ item, stage }) => {
   const isNoGo = item.recommendation === "No-Go";
   const isGo = item.recommendation === "Go";
   return (
@@ -66,7 +71,14 @@ export const CaseCard: React.FC<{ item: CaseStudy }> = ({ item }) => {
             <span className="px-3 py-1.5 rounded-full bg-black/35 backdrop-blur-xl border border-white/10 text-[10px] uppercase tracking-widest text-white/85 font-medium">
               {item.tag}
             </span>
-            {item.recommendation && (
+            {/* Every project carries its stage, not only the ones on site
+                (Ed, 9 September 2026). Blank means Complete. */}
+            {(stage || item.kind === 'project') && (
+              <span className="px-3 py-1.5 rounded-full backdrop-blur-xl border text-[10px] uppercase tracking-widest font-semibold bg-black/35 border-white/20 text-white/90">
+                {item.status ?? 'Complete'}
+              </span>
+            )}
+            {!stage && item.kind !== 'project' && item.recommendation && (
               <span className={`px-3 py-1.5 rounded-full backdrop-blur-xl border text-[10px] uppercase tracking-widest font-semibold ${
                 isNoGo
                   ? 'bg-red-500/20 border-red-300/30 text-red-100'

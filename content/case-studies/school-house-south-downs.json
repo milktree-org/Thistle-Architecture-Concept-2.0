@@ -53,7 +53,7 @@
   },
   "listing": {
     "order": 100,
-    "status": "Complete",
+    "status": "Consented",
     "conversionTypes": [
       "high-end-residential"
     ]
@@ -73,7 +73,6 @@
         "value": "Protected dark skies"
       }
     ],
-    "planningRoute": "Full planning",
-    "completionDate": ""
+    "planningRoute": "Full planning"
   }
 }

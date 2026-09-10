@@ -1,7 +1,7 @@
 {
   "kind": "feasibility",
   "title": "Listed Building To Co-Living",
-  "location": "Winchester, Hampshire",
+  "location": "Southgate, Winchester",
   "tag": "HMO",
   "desc": "A listed building on Southgate Street tested for a ten-bed co-living scheme above a retained shop, with private and shared gardens worked into the plan.",
   "image": {
@@ -38,7 +38,8 @@
         "value": "Listed building"
       }
     ],
-    "planningRoute": "Full planning and listed building consent"
+    "planningRoute": "Full planning and listed building consent",
+    "completionDate": "October 2025"
   },
   "writeup": {
     "challenge": "Listed buildings are the hardest conversion category: every internal alteration needs justifying, and co-living intensity multiplies the scrutiny. The client wanted to know whether a ten-bed co-living scheme could work at 23 Southgate while keeping the existing shop trading on the ground floor.",
@@ -53,7 +54,7 @@
       },
       {
         "label": "Ground floor",
-        "value": "Shop retained"
+        "value": "Shop partially retained"
       },
       {
         "label": "Constraint",
@@ -62,6 +63,10 @@
       {
         "label": "Planning route",
         "value": "Full planning and listed building consent"
+      },
+      {
+        "label": "Date",
+        "value": "October 2025"
       }
     ],
     "brief": "Listed buildings are the hardest conversion category: every internal alteration needs justifying, and co-living intensity multiplies the scrutiny. The client wanted to know whether a ten-bed co-living scheme could work at 23 Southgate while keeping the existing shop trading on the ground floor.",

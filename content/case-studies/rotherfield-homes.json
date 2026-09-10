@@ -1,7 +1,7 @@
 {
   "kind": "project",
   "title": "One House To Four Homes",
-  "location": "Hampshire",
+  "location": "Crawley, West Sussex",
   "tag": "Residential Development",
   "desc": "A single large plot assessed for capacity, then masterplanned and consented as four new homes through a phased planning strategy.",
   "image": {
@@ -37,7 +37,7 @@
   },
   "listing": {
     "order": 90,
-    "status": "Complete",
+    "status": "Consented",
     "conversionTypes": [
       "high-end-residential"
     ]
@@ -57,7 +57,6 @@
         "value": "Full permission"
       }
     ],
-    "planningRoute": "Phased, then full planning",
-    "completionDate": ""
+    "planningRoute": "Phased, then full planning"
   }
 }

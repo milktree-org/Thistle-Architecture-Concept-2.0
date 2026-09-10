@@ -3,8 +3,8 @@
   "lastUpdated": "September 2026",
   "metaTitle": "Feasibility Report: Basis and Limitations",
   "metaDescription": "What a Thistle Architecture feasibility report is, what it is not, and the limits of our responsibility for it. Please read before you instruct us.",
-  "liabilityCap": "",
-  "piLimit": "",
+  "liabilityCap": "the fees you paid us for that report",
+  "piLimit": "£1,000,000",
   "intro": "Please read this before you instruct us. It explains what a Thistle Architecture feasibility report is, what it is not, and the limits of our responsibility for it. By ticking the box at checkout you confirm you have read and accepted it.",
   "sections": [
     {
@@ -57,7 +57,7 @@
     },
     {
       "heading": "8. The limit of our financial responsibility",
-      "body": "Our total liability to you arising out of or in connection with a feasibility report, whether in contract, in tort including negligence, for breach of statutory duty or otherwise, is limited in aggregate to the greater of {{liabilityCap}} and ten times the fees you paid us for that report. We do not accept liability for loss of profit, loss of rent, loss of revenue, loss of opportunity, loss of anticipated savings, or any indirect or consequential loss.\n\nThis is a deliberate allocation of risk. A feasibility report is a high-level appraisal prepared for a modest fee relative to the sums you will commit if you proceed, and the decision to proceed — together with the detailed diligence supporting it — is yours. A higher limit of liability is available on request for an additional fee, quoted before we start. Please ask if you would like one.\n\nWe hold professional indemnity insurance with a limit of indemnity of {{piLimit}} for each and every claim.\n\nWhere more than one party is responsible for a loss, our liability is limited to the proportion of that loss which it is just and equitable for us to pay having regard to the extent of our own responsibility. In plain terms: if another party is partly to blame and cannot pay, you may not be able to recover their share from us.",
+      "body": "Our total liability to you arising out of or in connection with a feasibility report, whether in contract, in tort including negligence, for breach of statutory duty or otherwise, is limited in aggregate to {{liabilityCap}}. We do not accept liability for loss of profit, loss of rent, loss of revenue, loss of opportunity, loss of anticipated savings, or any indirect or consequential loss.\n\nThis is a deliberate allocation of risk. A feasibility report is a high-level appraisal prepared for a modest fee relative to the sums you will commit if you proceed, and the decision to proceed — together with the detailed diligence supporting it — is yours. A higher limit of liability is available on request for an additional fee, quoted before we start. Please ask if you would like one.\n\nWe hold professional indemnity insurance with a limit of indemnity of {{piLimit}} for each and every claim.\n\nWhere more than one party is responsible for a loss, our liability is limited to the proportion of that loss which it is just and equitable for us to pay having regard to the extent of our own responsibility. In plain terms: if another party is partly to blame and cannot pay, you may not be able to recover their share from us.",
       "bullets": null
     },
     {

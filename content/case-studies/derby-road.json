@@ -1,7 +1,7 @@
 {
   "kind": "project",
   "title": "Eight-Bed Ultra Luxury HMO",
-  "location": "South Coast, England",
+  "location": "Portsmouth, Hampshire",
   "tag": "HMO",
   "desc": "An eight-bedroom ultra luxury HMO on the south coast, built around a rooflit living and dining space at the back of the house.",
   "image": {
@@ -69,7 +69,8 @@
         "label": "Communal space",
         "value": "Living and dining"
       }
-    ]
+    ],
+    "completionDate": "2024"
   },
   "writeup": {
     "approach": "The communal heart of the house is a rear living and dining room lit by a large flush rooflight, with French doors to the outside. The finish is pitched well above the standard letting specification: wall lights either side of a sculptural panel, cane and black timber dining chairs, and a soft palette that reads as a home rather than a room let by the week.",

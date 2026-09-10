@@ -11,7 +11,7 @@
   },
   "listing": {
     "order": 130,
-    "status": "Complete",
+    "status": "On site",
     "conversionTypes": [
       "hmo"
     ]
@@ -25,10 +25,6 @@
       {
         "label": "Apartments",
         "value": "6"
-      },
-      {
-        "label": "GDV",
-        "value": "2.1 million"
       }
     ],
     "planningRoute": "Large sui generis HMO, external works under PDR"

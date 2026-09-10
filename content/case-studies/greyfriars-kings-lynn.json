@@ -21,7 +21,7 @@
   ],
   "listing": {
     "order": 30,
-    "recommendation": "Options Tested"
+    "recommendation": "Go"
   },
   "facts": {
     "stats": [
@@ -38,7 +38,8 @@
         "value": "With extension"
       }
     ],
-    "planningRoute": "Full planning"
+    "planningRoute": "Full planning",
+    "completionDate": "November 2025"
   },
   "writeup": {
     "challenge": "The Greyfriars building could plausibly become conventional flats or a large co-living HMO, and each route carries different planning risk, build cost, and income. Committing to the wrong use class early would have meant abortive design fees and a weaker planning story. The client needed both options tested to the same standard before choosing.",
@@ -62,6 +63,10 @@
       {
         "label": "Planning route",
         "value": "Full planning"
+      },
+      {
+        "label": "Date",
+        "value": "November 2025"
       }
     ],
     "brief": "The Greyfriars building could plausibly become conventional flats or a large co-living HMO, and each route carries different planning risk, build cost, and income. Committing to the wrong use class early would have meant abortive design fees and a weaker planning story. The client needed both options tested to the same standard before choosing.",

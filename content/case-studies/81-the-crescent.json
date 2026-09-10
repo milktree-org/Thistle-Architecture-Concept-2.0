@@ -14,24 +14,25 @@
     "status": "Complete",
     "conversionTypes": [
       "hmo"
-    ]
+    ],
+    "provenance": "By HMO Designers, part of Thistle Group"
   },
   "facts": {
     "stats": [
       {
-        "label": "Tenant type",
-        "value": "Professionals"
+        "label": "Bedrooms, all en suite",
+        "value": "6"
       },
       {
-        "label": "Bedrooms",
-        "value": "6"
+        "label": "Tenant type",
+        "value": "Professionals"
       },
       {
         "label": "Finish",
         "value": "High specification"
       }
     ],
-    "completionDate": "2025"
+    "completionDate": "2024"
   },
   "writeup": {
     "approach": "Each room is a self-contained unit rather than a bedroom with a shared bathroom down the hall: its own en suite behind an oak door, a slatted timber headboard panel wired with sockets and switches at the bed, a desk under the window, and a wardrobe and chest in cane-fronted oak. The en suites are tiled in large-format stone with quadrant showers and backlit round mirrors. Separate tea stations sit outside the rooms, which is the arrangement that keeps a scheme like this the right side of the licensing standards on kitchen provision.",

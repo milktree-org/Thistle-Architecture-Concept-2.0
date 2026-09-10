@@ -36,7 +36,7 @@
   },
   "listing": {
     "order": 230,
-    "status": "On site",
+    "status": "Complete",
     "conversionTypes": [
       "hmo"
     ]
@@ -56,6 +56,6 @@
         "value": "Stage 4 and delivery"
       }
     ],
-    "completionDate": ""
+    "completionDate": "2024"
   }
 }

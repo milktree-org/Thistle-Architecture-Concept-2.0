@@ -3,7 +3,7 @@
   "title": "Office To High-End Houses",
   "location": "Compton, Newbury",
   "tag": "Commercial to Residential",
-  "desc": "A rural office building tested against three different sketch schemes, landing on a terrace of four three-bed houses and one two-bed unit.",
+  "desc": "A rural office building tested against two sketch schemes, landing on a terrace of four three-bed houses and one two-bed unit.",
   "image": {
     "src": "/images/projects/axis-house-elevation-1.webp",
     "kind": "drawing"
@@ -29,13 +29,15 @@
   ],
   "listing": {
     "order": 40,
-    "recommendation": "Options Tested"
+    "recommendation": "Go",
+    "alsoProject": true,
+    "status": "In planning"
   },
   "facts": {
     "stats": [
       {
         "label": "Sketch proposals tested",
-        "value": "3"
+        "value": "2"
       },
       {
         "label": "Homes identified",
@@ -58,7 +60,7 @@
     "keyInfo": [
       {
         "label": "Sketch proposals tested",
-        "value": "3"
+        "value": "2"
       },
       {
         "label": "Homes identified",
@@ -78,8 +80,8 @@
       }
     ],
     "brief": "Axis House is an office building in a village setting, and the client wanted to understand its highest-value residential future. Flats, a small number of large houses, and a terrace of family homes were all plausible, with very different values and build scopes.",
-    "found": "We tested three sketch proposals over the existing plans, working with the building's structural grid. The preferred scheme divides the building into four three-bed houses of around 83 sqm each plus one larger two-bed unit, using ground floor timber-frame extensions, new rear openings, dormers, and rooflights to make each house work over three floors.",
-    "recommendation": "The client received drawn options with elevations for the preferred scheme, a clear unit mix, and the alterations list that planning and costing conversations need. Three rounds of sketch testing settled the direction before any detailed design fees were spent.",
+    "found": "We tested two sketch proposals over the existing plans, working with the building's structural grid. The preferred scheme divides the building into four three-bed houses of around 83 sqm each plus one larger two-bed unit, using ground floor timber-frame extensions, new rear openings, dormers, and rooflights to make each house work over three floors.",
+    "recommendation": "The client received drawn options with elevations for the preferred scheme, a clear unit mix, and the alterations list that planning and costing conversations need. Two rounds of sketch testing settled the direction before any detailed design fees were spent.",
     "sketchCaption": "The preferred scheme: four three-bed houses and one two-bed unit within the existing office building.",
     "decision": "",
     "roadmap": []

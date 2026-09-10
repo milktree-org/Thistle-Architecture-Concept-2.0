@@ -5,7 +5,7 @@
       "actions": [
         {
           "type": "email",
-          "to": "hello@incollective.works"
+          "to": "hello@thistlearchitecture.co.uk"
         }
       ]
     },
@@ -14,7 +14,7 @@
       "actions": [
         {
           "type": "email",
-          "to": "hello@incollective.works"
+          "to": "hello@thistlearchitecture.co.uk"
         }
       ]
     },
@@ -23,7 +23,7 @@
       "actions": [
         {
           "type": "email",
-          "to": "hello@incollective.works"
+          "to": "hello@thistlearchitecture.co.uk"
         },
         {
           "type": "autoresponse",

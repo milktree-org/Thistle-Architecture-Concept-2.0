@@ -14,6 +14,12 @@ const nextConfig: NextConfig = {
   // same row reappearing on the next report.
   async redirects() {
     return [
+      // 9 September 2026, Ed's answers. The Eastleigh HMO photographs are the
+      // George Street kitchen (same units, worktop and rooflit dining room), so
+      // the two pages were one property; merged into George Street. Beechmount
+      // comes off the site entirely, at his request.
+      { source: '/case-studies/eastleigh-hmo', destination: '/case-studies/george-street-eastleigh', statusCode: 301 },
+      { source: '/case-studies/beechmount-manchester', destination: '/case-studies/feasibility-studies', statusCode: 301 },
       // Item 110, September 2026: high-end residential is extensions, remodels
       // and new homes, not a conversion, so it moved out of /conversions/. The
       // page itself is still rendered by /conversions/[type] via the rewrite
@@ -35,9 +41,11 @@ const nextConfig: NextConfig = {
         destination: '/case-studies/bishopstoke-road',
         statusCode: 301,
       },
+      // Forest Home and Forest House, Lymington are the same job (Ed, 9 Sept
+      // 2026), so the old slug goes to the page rather than the hub.
       {
         source: '/case-studies/forest-home',
-        destination: '/case-studies/completed-projects',
+        destination: '/case-studies/forest-house-lymington',
         statusCode: 301,
       },
       // Old live-site journal URLs (root-level on Wix) map to /blog.

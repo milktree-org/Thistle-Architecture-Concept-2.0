@@ -1,11 +1,11 @@
 {
   "_template": "completedProjects",
-  "metaTitle": "Completed Projects",
-  "metaDescription": "Conversions and schemes delivered through to completion across the Thistle Group, filterable by conversion type.",
+  "metaTitle": "Projects",
+  "metaDescription": "Conversions, HMOs, co-living and homes across the Thistle Group, from consented schemes and sites under construction to completed buildings.",
   "hero": {
     "label": "Our Work",
-    "heading": "Completed Projects.",
-    "description": "Conversions and schemes delivered through to completion across the Thistle Group."
+    "heading": "Projects.",
+    "description": "Every scheme carries its stage: consented, at tender, on site or complete."
   },
   "allLabel": "All",
   "typeLabels": [

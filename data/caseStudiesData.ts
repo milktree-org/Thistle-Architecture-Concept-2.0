@@ -34,7 +34,18 @@ export interface CaseStudy {
   completionDate?: string;
   recommendation?: "Go" | "No-Go" | "Options Tested";
   /** Completed-project entries only. Defaults to Complete when unset. */
-  status?: "Complete" | "On site";
+  /**
+   * The project's stage. Ed's set, 9 September 2026: Complete, On site,
+   * Consented, At tender, plus In planning for a study that has gone in for
+   * permission. Shown as a badge on every project card and on the page.
+   */
+  status?: "Complete" | "On site" | "Consented" | "At tender" | "In planning";
+  /**
+   * A feasibility study that also belongs in the Projects list because the
+   * scheme has moved on (Axis House went to planning in March 2026). It keeps
+   * its study page and appears in both lists.
+   */
+  alsoProject?: boolean;
   /**
    * Completed projects only. When present the detail page tells the project
    * story from Ed's Project Explanations.docx: the finished building first,
@@ -293,29 +304,6 @@ export const caseStudies: CaseStudy[] = [
     recommendation: "Options Tested",
   },
   {
-    slug: "beechmount-manchester",
-    kind: "feasibility",
-    title: "Existing HMO Reconfiguration",
-    location: "Manchester, Greater Manchester",
-    image: "/images/projects/beechmount-sk001-1.webp",
-    tag: "HMO",
-    stats: [
-      { label: "Building type", value: "Existing HMO" },
-      { label: "Study output", value: "Sketch layout" },
-      { label: "Focus", value: "Room quality" },
-    ],
-    desc: "An existing Manchester HMO tested for reconfiguration, checking whether the current layout was leaving room count or room quality on the table.",
-    challenge: "Beech Mount already operated as an HMO, but the client suspected the layout was underperforming: awkward room shapes, weak communal provision, and circulation that ate lettable space. The question was whether a reconfiguration could improve the room schedule without triggering disproportionate building work.",
-    approach: "We redrew the building from the existing plans and tested a revised layout, room by room, against current HMO space and amenity standards. The sketch balances additional en-suite provision against the cost of moving services and structure.",
-    outcome: "The client received a drawn reconfiguration option with a room schedule to compare against the building's current performance, giving a clear basis for the refurbishment decision.",
-    galleryImages: [
-      "/images/projects/beechmount-sk001-1.webp",
-    ],
-    buildingType: "Existing HMO",
-    planningRoute: "Licensing and building regulations led",
-    recommendation: "Options Tested",
-  },
-  {
     slug: "beech-house-road-croydon",
     feasibility: {
       // All figures from the project's Feasibility Overview, June 2026.
@@ -451,10 +439,8 @@ export const caseStudies: CaseStudy[] = [
         { label: "Room sizes", value: "9.5 to 12.5 sqm" },
         { label: "Communal space", value: "26 sqm" },
         { label: "Planning route", value: "Householder application, then C4 LDC" },
-        { label: "Key risk", value: "Flood Zone 3" },
         { label: "Date", value: "July 2026" },
       ],
-      indicativeValue: "£600,000 to £680,000",
       brief: "Could a detached three-bedroom house be converted into a compliant and commercially viable six-bedroom HMO before the client committed to buying it?",
       found: "Six en-suite bedrooms are achievable without the loft, which at roughly 1.8 metres to the ridge cannot meet the 2.13 metre standard and is given over to plant and storage instead. The garage is brought into the house through a new full-width rear extension, creating a 26 sqm kitchen and dining space and an 11.7 sqm ground floor bedroom. Every room clears the borough's 9 sqm minimum.",
       recommendation: "Proceed at six bedrooms in Use Class C4. A householder application covers the extension and the garage connection, and a lawful development certificate confirms the change of use once the works are done. Appoint a flood risk assessor before the application. A seventh bedroom would make the use sui generis and require full planning permission, so the value here lies in holding it at six.",
@@ -936,41 +922,6 @@ export const caseStudies: CaseStudy[] = [
     ],
     buildingType: "Existing dwelling",
     completionDate: "2025",
-    status: "Complete",
-  },
-  {
-    slug: "eastleigh-hmo",
-    conversionTypes: ['hmo'],
-    kind: "project",
-    title: "Eastleigh HMO",
-    location: "Eastleigh, Hampshire",
-    image: "/images/projects/eastleigh-hmo/eastleigh-1.jpg",
-    tag: "HMO",
-    stats: [
-      { label: "Roof", value: "Converted, rooflit" },
-      { label: "En suites", value: "Throughout" },
-      { label: "Communal", value: "Galley kitchen" },
-    ],
-    desc: "An HMO conversion in Eastleigh finished in a warmer register than most: brass bedsteads, patterned rugs and sage green en suites, with the roof taken as living space.",
-    approach: "The roof does the heavy lifting. The top floor is a full room under a pitched ceiling with two rooflights and fitted panelled wardrobes built into the low wall, which turns the least useful part of the house into the best room in it. Downstairs the kitchen is a galley running to the rear with the dining space at the end. The stairwell is panelled and painted olive, and the en suites pick the same green up in glass splashbacks behind the basins.",
-    outcome: "Complete and photographed in October 2024. The specification deliberately avoids the flat-pack look that HMO fit-outs default to: brass bed frames, patterned rugs, wall lights either side of the bed, and a desk in each room facing the window.",
-    galleryImages: [
-      "/images/projects/eastleigh-hmo/eastleigh-2.jpg",
-      "/images/projects/eastleigh-hmo/eastleigh-3.jpg",
-      "/images/projects/eastleigh-hmo/eastleigh-4.jpg",
-      "/images/projects/eastleigh-hmo/eastleigh-5.jpg",
-      "/images/projects/eastleigh-hmo/eastleigh-6.jpg",
-      "/images/projects/eastleigh-hmo/eastleigh-7.jpg",
-      "/images/projects/eastleigh-hmo/eastleigh-8.jpg",
-      "/images/projects/eastleigh-hmo/eastleigh-9.jpg",
-      "/images/projects/eastleigh-hmo/eastleigh-10.jpg",
-      "/images/projects/eastleigh-hmo/eastleigh-11.jpg",
-      "/images/projects/eastleigh-hmo/eastleigh-12.jpg",
-      "/images/projects/eastleigh-hmo/eastleigh-13.jpg",
-      "/images/projects/eastleigh-hmo/eastleigh-14.jpg",
-    ],
-    buildingType: "Existing dwelling",
-    completionDate: "2024",
     status: "Complete",
   },
   {

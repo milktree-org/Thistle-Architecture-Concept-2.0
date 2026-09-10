@@ -78,7 +78,7 @@
   "facts": {
     "stats": [
       {
-        "label": "Bedrooms",
+        "label": "Bedrooms, all en suite",
         "value": "7"
       },
       {
@@ -89,10 +89,11 @@
         "label": "Market",
         "value": "Professional lets"
       }
-    ]
+    ],
+    "completionDate": "2024"
   },
   "writeup": {
-    "approach": "The client was carried through every stage: design, planning, interior design and construction. The ground floor is the part that does the work. A full-length shaker kitchen in deep grey, with brass handles and integrated ovens down one side, opens straight into a rooflit dining room at the rear, so the shared space reads as one long room rather than a corridor with a table at the end of it.",
+    "approach": "The client was carried through every stage: design, planning, interior design and construction. The ground floor is the part that does the work. A full-length shaker kitchen in deep grey, with brass handles and integrated ovens down one side, opens straight into a rooflit dining room at the rear, so the shared space reads as one long room rather than a corridor with a table at the end of it. Upstairs the roof does the heavy lifting: the top floor is a full room under a pitched ceiling with two rooflights and fitted wardrobes built into the low wall, and the en suites pick up the same green in glass splashbacks behind the basins.",
     "outcome": "Complete. It is the clearest example in this group of what the extra effort buys at the top of the professional letting market."
   }
 }

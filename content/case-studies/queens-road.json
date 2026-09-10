@@ -1,7 +1,7 @@
 {
   "kind": "project",
   "title": "Three-Bed Family House To Seven-Bed HMO",
-  "location": "South Coast, England",
+  "location": "Portsmouth, Hampshire",
   "tag": "HMO",
   "desc": "A three-bedroom city centre family house turned into a seven-bedroom high-end HMO, every room en suite.",
   "image": {
@@ -53,7 +53,8 @@
         "label": "En suite",
         "value": "Every room"
       }
-    ]
+    ],
+    "completionDate": "2024"
   },
   "writeup": {
     "challenge": "The starting point was an ordinary three-bedroom family house in a city centre. Getting seven en suite rooms out of that means finding the rooms and the drainage for seven bathrooms at the same time, without leaving the shared space so thin that the house stops working for the people actually living in it.",

@@ -68,24 +68,25 @@
     "status": "Complete",
     "conversionTypes": [
       "hmo"
-    ]
+    ],
+    "provenance": "By HMO Designers, part of Thistle Group"
   },
   "facts": {
     "stats": [
       {
-        "label": "Communal",
-        "value": "Kitchen and dining"
+        "label": "Bedrooms, all en suite",
+        "value": "7"
       },
       {
-        "label": "Outside",
-        "value": "Walled courtyard"
+        "label": "Communal",
+        "value": "Kitchen and dining"
       },
       {
         "label": "En suites",
         "value": "Marble tiled"
       }
     ],
-    "completionDate": "2025"
+    "completionDate": "2024"
   },
   "writeup": {
     "approach": "The whole ground floor is given over to one move: a navy shaker kitchen running the full depth of the house, brass handles, stone worktops, integrated ovens and laundry built in, opening at the far end into a dining room lit from above by a flat rooflight. Panelling to dado height carries through the dining room and up the staircase, all in the same navy, so the circulation reads as part of the design rather than as leftover space. The en suites are tiled floor to ceiling in white marble with backlit round mirrors.",

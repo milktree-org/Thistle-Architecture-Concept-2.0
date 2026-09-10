@@ -69,9 +69,9 @@ export const OurWorkPage: React.FC<{ studies: CaseStudy[]; projects: CaseStudy[]
         <Reveal delay={0.1} fullHeight>
           <Door
             href="/case-studies/completed-projects"
-            eyebrow="Completed Projects"
-            heading="What Got Built."
-            body="Conversions, HMOs, co-living and homes taken from feasibility through planning to completion."
+            eyebrow="Projects"
+            heading="What Got Built, And What Is Being Built."
+            body="Conversions, HMOs, co-living and homes, each carrying its stage: consented, at tender, on site or complete."
             count={projects.length}
             cover={projects[0]}
           />

@@ -38,7 +38,7 @@ const TYPES: { key: ConversionType; label: string }[] = [
 // sections/Footer.tsx.
 const COPY_FALLBACK = {
   label: 'Our Work',
-  heading: 'Completed Projects.',
+  heading: 'Projects.',
   description: 'Conversions and schemes delivered through to completion across the Thistle Group.',
   allLabel: 'All',
   footnote: 'Some of these were delivered by HMO Designers, our sister practice within the Thistle Group. Each one says so on its own page.',
@@ -168,7 +168,7 @@ export const CompletedProjectsPage: React.FC<CompletedProjectsPageProps> = ({
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-fl-5">
             {shown.map((item, i) => (
               <Reveal key={item.slug} delay={Math.min(i * 0.06, 0.3)}>
-                <CaseCard item={item} />
+                <CaseCard item={item} stage />
               </Reveal>
             ))}
           </div>

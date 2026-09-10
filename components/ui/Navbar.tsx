@@ -39,7 +39,7 @@ const navLinks: NavItem[] = [
     path: "/case-studies",
     children: [
       { key: "our-work.feasibility", label: "Feasibility Studies", path: "/case-studies/feasibility-studies" },
-      { key: "our-work.completed", label: "Completed Projects", path: "/case-studies/completed-projects" },
+      { key: "our-work.completed", label: "Projects", path: "/case-studies/completed-projects" },
     ],
   },
   {

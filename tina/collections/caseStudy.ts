@@ -194,8 +194,17 @@ export const caseStudyCollection: Collection = {
         options: [
           { value: 'Complete', label: 'Complete' },
           { value: 'On site', label: 'On site' },
+          { value: 'Consented', label: 'Consented' },
+          { value: 'At tender', label: 'At tender' },
+          { value: 'In planning', label: 'In planning' },
         ],
-        description: 'Completed projects only. Blank means Complete.',
+        description: 'The stage shown as a badge on the card and the page. Blank means Complete. Set it here, per project; nothing else has to change.',
+      },
+  {
+        type: 'boolean',
+        name: 'alsoProject',
+        label: 'Also list under Projects',
+        description: 'For a feasibility study whose scheme has moved on, so it appears in the Projects list as well as the studies, with the stage above as its badge. Axis House, which went to planning in March 2026, is the case this exists for.',
       },
   {
         type: 'string',
