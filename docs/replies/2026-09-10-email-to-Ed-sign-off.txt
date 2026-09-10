@@ -1,0 +1,20 @@
+Subject: Thistle sign-off: items 56 to 112 attached, and what is left on each side
+
+Hi Ed,
+
+Attached is the point by point update on items 56 to 112, using your numbers. 48 are done and live, 6 are done as far as we can take them and need one answer from you, 2 wait on you entirely, 1 needs no action by your note. Everything marked done has been checked on the live site. Where a row needs something from you, it says exactly what.
+
+You mentioned on Tuesday that you still owe your comments on the Thistle site before the codebase comes across. Can you send those this week, against the item numbers where they apply, and we will close them in one pass.
+
+On the rest of your 2 September list, so we both know where it stands:
+
+1. Casino spam. All five URLs, including /home-2-0/ and /signup-2-0/, return 410 on hmodesigners.co.uk and have done since 2 September. Re-checked today. The removal requests in Search Console are the last step and need the Thistle Search Console property, which is item 3 below.
+2. Root cause note for the June hack. Sent to you on 2 September as a PDF on the "Everything open between us" thread. Say if it needs anything more.
+3. GA4 and Search Console ownership. Still waiting on the Google account. Sign up thistleanalytics@gmail.com to Google Analytics and tell me it is done, and I will move the property into it (history and Measurement ID kept, 48 hours, one way) and set up the Search Console properties under the same account with us as read and edit.
+4. Legal entity, the protected title and the Stripe prices. All three done. The footer, privacy and terms name Incollective Limited; the title is gone from every page; the Stripe charge is computed from the same fee engine as the page and is labelled VAT inclusive. If you still see a mismatch anywhere, send me the page and the amount.
+5. HMO Designers deploy and handover. Answered yesterday. Your figures are live. Once you have the Thistle GitHub organisation and Vercel account, I will move the repo, Vercel and Tina Cloud across in that order.
+
+One check from our side: on 3 September you sent a screenshot of the Tina editor not loading for you. Is that now working on both sites, or only on HMO Designers?
+
+Best,
+Akash
