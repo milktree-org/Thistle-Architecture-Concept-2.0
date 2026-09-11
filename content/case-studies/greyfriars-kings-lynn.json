@@ -3,7 +3,7 @@
   "title": "Office To Residential Or HMO",
   "location": "King's Lynn, Norfolk",
   "tag": "Mixed Use",
-  "desc": "One building, two viable futures. We drew both the conventional residential option and the nine-bed co-living option so the client could compare returns directly.",
+  "desc": "One building, two viable futures. We drew a residential conversion and a seventeen-room co-living HMO for the same envelope so the client could compare income, build scope and planning risk directly.",
   "image": {
     "src": "/images/projects/greyfriars-option4-1.webp",
     "kind": "drawing"
@@ -21,7 +21,9 @@
   ],
   "listing": {
     "order": 30,
-    "recommendation": "Go"
+    "recommendation": "Go",
+    "alsoProject": true,
+    "status": "In planning"
   },
   "facts": {
     "stats": [
@@ -31,20 +33,20 @@
       },
       {
         "label": "HMO option",
-        "value": "9 en-suite"
+        "value": "17 en suite"
       },
       {
         "label": "Both options",
         "value": "With extension"
       }
     ],
-    "planningRoute": "Full planning",
+    "planningRoute": "Class MA prior approval, then full planning",
     "completionDate": "November 2025"
   },
   "writeup": {
-    "challenge": "The Greyfriars building could plausibly become conventional flats or a large co-living HMO, and each route carries different planning risk, build cost, and income. Committing to the wrong use class early would have meant abortive design fees and a weaker planning story. The client needed both options tested to the same standard before choosing.",
-    "approach": "We sketched the building both ways. Option 2 tests a residential conversion with an extension. Option 4 tests a nine-bedroom en-suite HMO with distributed shared spaces, also with the extension. Both layouts are colour-coded by room function, with bedroom sizes and shared amenity areas stated on the drawings, so the two schemes can be compared like for like.",
-    "outcome": "The client received two fully drawn options for the same envelope, each with its own unit and room schedule. That turned an abstract use-class decision into a straightforward comparison of income, build scope, and planning position."
+    "challenge": "Greyfriars Chambers is a landmark corner building on St James Street: a former public house, extended in an Art Deco style, refurbished as offices in 2018 and occupied by an accountancy practice, with around 365 sqm over two floors and parking to the rear. The client held it under an option agreement and needed to know, before exercising it, whether the building should become conventional flats or a large co-living HMO. Each route carries a different planning risk, build cost and income, and committing to the wrong one early would have meant abortive design fees and a weaker planning story.",
+    "approach": "We sketched the building both ways to the same standard. Option 1 tests a residential conversion into eight flats, with an extension. Option 2 tests a seventeen-bedroom en-suite HMO with the same extension, with the shared kitchen, living and laundry distributed across the plan rather than pushed into one corner, a plant room and a cleaner's store. Both layouts are colour-coded by room function with every bedroom size stated on the drawing, so the two schemes compare like for like. Room sizes on the HMO option run from 10.8 to 22 sqm, well clear of the licensing minimums.",
+    "outcome": "Go, on a phased planning strategy. Establish the residential principle first through Class MA prior approval for the office-to-residential conversion, which is a low-risk application with a fixed timetable, then use that consent as the fallback while a full planning application is made for the larger co-living scheme. The co-living scheme is the higher-value outcome and the one the building suits best, but the client should never be in a position where the only consent in hand is the harder one."
   },
   "feasibility": {
     "keyInfo": [
@@ -54,7 +56,7 @@
       },
       {
         "label": "HMO option",
-        "value": "9 en-suite"
+        "value": "17 en suite"
       },
       {
         "label": "Both options",
@@ -62,18 +64,25 @@
       },
       {
         "label": "Planning route",
-        "value": "Full planning"
+        "value": "Class MA prior approval, then full planning"
       },
       {
         "label": "Date",
         "value": "November 2025"
       }
     ],
-    "brief": "The Greyfriars building could plausibly become conventional flats or a large co-living HMO, and each route carries different planning risk, build cost, and income. Committing to the wrong use class early would have meant abortive design fees and a weaker planning story. The client needed both options tested to the same standard before choosing.",
-    "found": "We sketched the building both ways. Option 2 tests a residential conversion with an extension. Option 4 tests a nine-bedroom en-suite HMO with distributed shared spaces, also with the extension. Both layouts are colour-coded by room function, with bedroom sizes and shared amenity areas stated on the drawings, so the two schemes can be compared like for like.",
-    "recommendation": "The client received two fully drawn options for the same envelope, each with its own unit and room schedule. That turned an abstract use-class decision into a straightforward comparison of income, build scope, and planning position.",
-    "sketchCaption": "The two options drawn for the same envelope: residential conversion, and a nine-bed en-suite HMO.",
-    "decision": "",
-    "roadmap": []
+    "brief": "Greyfriars Chambers is a landmark corner building on St James Street: a former public house, extended in an Art Deco style, refurbished as offices in 2018 and occupied by an accountancy practice, with around 365 sqm over two floors and parking to the rear. The client held it under an option agreement and needed to know, before exercising it, whether the building should become conventional flats or a large co-living HMO. Each route carries a different planning risk, build cost and income, and committing to the wrong one early would have meant abortive design fees and a weaker planning story.",
+    "found": "We sketched the building both ways to the same standard. Option 1 tests a residential conversion into eight flats, with an extension. Option 2 tests a seventeen-bedroom en-suite HMO with the same extension, with the shared kitchen, living and laundry distributed across the plan rather than pushed into one corner, a plant room and a cleaner's store. Both layouts are colour-coded by room function with every bedroom size stated on the drawing, so the two schemes compare like for like. Room sizes on the HMO option run from 10.8 to 22 sqm, well clear of the licensing minimums.",
+    "recommendation": "Go, on a phased planning strategy. Establish the residential principle first through Class MA prior approval for the office-to-residential conversion, which is a low-risk application with a fixed timetable, then use that consent as the fallback while a full planning application is made for the larger co-living scheme. The co-living scheme is the higher-value outcome and the one the building suits best, but the client should never be in a position where the only consent in hand is the harder one.",
+    "sketchCaption": "Option 1 converts the offices into eight flats with the extension. Option 2 takes seventeen en-suite bedrooms with shared living, kitchen and laundry spread across both floors.",
+    "decision": "A phased route that unlocks the bigger scheme. The feasibility turned an abstract use-class question into a direct comparison of two drawn schemes, and recommended securing the simpler consent first so the larger one could be pursued from a position of strength. The client exercised the option. Class MA prior approval has since been granted and the co-living scheme is in full planning, so the project also appears under Projects.",
+    "roadmap": [
+      "Measured survey",
+      "Class MA prior approval",
+      "Pre-application on the co-living scheme",
+      "Full planning application",
+      "Technical design",
+      "Construction"
+    ]
   }
 }
