@@ -1,0 +1,78 @@
+{
+  "kind": "project",
+  "title": "Family Home Remade, With A Wraparound Extension",
+  "location": "Winchester, Hampshire",
+  "tag": "High-End Residential",
+  "desc": "A Winchester family home reconfigured inside and out: the front elevation rebuilt, the roof replaced and a brick-detailed single-storey wraparound extension to the rear.",
+  "image": {
+    "src": "/images/projects/clausentum-elevations-1.png",
+    "kind": "drawing"
+  },
+  "buildingType": "Detached family house (C3)",
+  "galleryImages": [
+    {
+      "src": "/images/projects/clausentum-elevations-1.png",
+      "kind": "drawing"
+    },
+    {
+      "src": "/images/projects/clausentum-floorplans-1.png",
+      "kind": "drawing"
+    }
+  ],
+  "projectStory": {
+    "summary": [
+      "A comprehensive reconfiguration and extension of an existing family home in Winchester, designed to completely transform both the internal accommodation and external appearance of the property.",
+      "The proposals included a full internal reconfiguration, complete rebuilding of the front elevation, replacement of the roof and a substantial single-storey wraparound extension to the rear. The extension incorporates carefully considered brick detailing alongside high-quality materials and finishes throughout, creating a contemporary addition that complements the character of the existing house.",
+      "Thistle Architecture was involved from the initial feasibility stage, developing the design and securing full planning permission before progressing the project through Stage 4 technical design and managing the construction through to completion.",
+      "The completed scheme has created a distinctive, high-quality family home, combining a substantially improved internal layout with carefully detailed architecture and a cohesive new external appearance."
+    ],
+    "sections": [
+      {
+        "title": "Planning",
+        "caption": "Proposed elevations and section: the rebuilt front elevation, the replacement roof and the single-storey wraparound extension to the rear.",
+        "images": [
+          {
+            "src": "/images/projects/clausentum-elevations-1.png",
+            "alt": "Proposed elevations and section for the reconfigured house",
+            "kind": "drawing"
+          }
+        ]
+      },
+      {
+        "title": "Technical Design",
+        "caption": "Stage 4 floor plans, the set the extension was built from.",
+        "images": [
+          {
+            "src": "/images/projects/clausentum-floorplans-1.png",
+            "alt": "Technical design floor plans for the extended house",
+            "kind": "drawing"
+          }
+        ]
+      }
+    ]
+  },
+  "listing": {
+    "order": 15,
+    "status": "Complete",
+    "conversionTypes": [
+      "high-end-residential"
+    ]
+  },
+  "facts": {
+    "stats": [
+      {
+        "label": "Existing",
+        "value": "Detached family house"
+      },
+      {
+        "label": "Extension",
+        "value": "Single-storey wraparound"
+      },
+      {
+        "label": "Change of use",
+        "value": "None"
+      }
+    ],
+    "planningRoute": "Full planning, extensions and alterations"
+  }
+}

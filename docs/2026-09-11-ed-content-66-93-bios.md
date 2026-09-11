@@ -224,3 +224,25 @@ Architecture and an MA in Interior Design.
 - GA4: he will sign thistleanalytics@gmail.com up and confirm on the thread.
 - Trustpilot login coming directly; Kaan's tier-field confirmation being
   chased.
+
+## Files pulled from the SharePoint folder, 11 September
+
+Akash supplied the folder link (Data > 01 Business Admin > 06 Marketing >
+2 Thistle > 1 Website > 03 New Website). Pulled into the gitignored
+`03 new website/` folder and applied:
+
+- `Feasibility Examples/23 Southgate Street/HD00070 - Proposed Plans.pdf`,
+  two sheets, rendered to `southgate-nine-bed-1.png` and `-2.png` (item 36).
+- `Finished Projects/All projects/Project Explanations.docx`: the page
+  layout brief and sixteen narratives. Applied to Monument House and
+  162 Millbrook (item 46); the other fourteen already matched the pages or
+  have no older-layout page. Monument House's narrative says eight
+  apartments and a mansard where the page said four; the page now follows
+  the narrative and Ed is asked to confirm. Its Greyfriars narrative says
+  five dwellings under Class MA and a 25-room co-living scheme, which is the
+  later planning position, not the feasibility (eight flats, seventeen
+  rooms) Ed wrote on 11 September; the feasibility page keeps his words.
+- `Finished Projects/All projects/Clausentum, Winchester House Extension/`:
+  two PDFs, rendered to `clausentum-elevations-1.png` and
+  `clausentum-floorplans-1.png`, behind the new Clausentum Road page
+  (item 12). The floor plan title block carries the street number.

@@ -4,7 +4,7 @@
   "location": "Southampton, Hampshire",
   "tag": "HMO",
   "buildingType": "C4 HMO and Office",
-  "desc": "One project two separate titles, office converted to residential apartments, and a 6 bedroom C4 HMO, converted to 11 bedroom Sui Generis HMO.",
+  "desc": "A former freight office and the six-bed HMO beside it, redeveloped as six apartments and an eleven-bedroom co-living scheme for professionals.",
   "image": {
     "src": "/images/uploads/images/projects/millbrook-1.png",
     "kind": "drawing"
@@ -27,7 +27,7 @@
         "value": "6"
       }
     ],
-    "planningRoute": "Large sui generis HMO, external works under PDR"
+    "planningRoute": "Full planning"
   },
   "writeup": {
     "challenge": "The scheme sits on Millbrook Road alongside a neighbouring property in the same ownership, and the two share a boundary and a party structure. The building had to reach a room count that works commercially while clearing the local authority's HMO standards on room sizes, communal amenity, kitchen provision and refuse storage, which is where schemes like this usually come unstuck.",
@@ -43,5 +43,31 @@
       "src": "/images/uploads/images/projects/millbrook-2.png",
       "kind": "drawing"
     }
-  ]
+  ],
+  "projectStory": {
+    "summary": [
+      "A major redevelopment of two adjoining properties in Southampton, comprising a former freight office alongside an existing six-bedroom HMO, set within a substantial plot with large front driveways and extensive rear gardens.",
+      "The proposals involve the conversion of the former office into six new residential apartments, alongside the enlargement and complete reconfiguration of the adjoining HMO to create an 11-bedroom high-end co-living scheme for professionals. The co-living accommodation incorporates shared amenity space on every floor, while the apartments have been designed as high-quality homes for the local residential market.",
+      "Thistle Architecture has been involved throughout the entire project, from initial feasibility and pre-application consultation through to securing full planning permission, Stage 4 technical design and full interior design of both the apartments and co-living accommodation. Our involvement has continued into construction, providing Contract Administration and management of the works through to completion.",
+      "The project is currently under construction and is due to complete in December 2026, delivering a comprehensively designed mixed residential development comprising six new apartments and an 11-bedroom professionally focused co-living scheme."
+    ],
+    "sections": [
+      {
+        "title": "Feasibility And Concept Design",
+        "caption": "The two buildings drawn together: six apartments in the former office and the eleven-bedroom co-living layout in the enlarged HMO.",
+        "images": [
+          {
+            "src": "/images/uploads/images/projects/millbrook-1.png",
+            "alt": "Proposed layout for the apartments and the co-living scheme",
+            "kind": "drawing"
+          },
+          {
+            "src": "/images/uploads/images/projects/millbrook-2.png",
+            "alt": "Proposed plans for the co-living accommodation",
+            "kind": "drawing"
+          }
+        ]
+      }
+    ]
+  }
 }

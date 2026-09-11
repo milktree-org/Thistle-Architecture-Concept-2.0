@@ -1,9 +1,9 @@
 {
   "kind": "project",
-  "title": "Period Building To Four Apartments",
+  "title": "Office Building To Eight Apartments, With A Mansard",
   "location": "Winchester, Hampshire",
   "tag": "Office to Flats",
-  "desc": "A period building in central Winchester converted into four apartments, with the modern uPVC swapped back for traditional sash windows.",
+  "desc": "A former office building at the top of Winchester High Street, beside a Grade I listed neighbour, converted into eight apartments with a new mansard roof extension.",
   "image": {
     "src": "/images/projects/monument-house-render-2.webp",
     "kind": "drawing"
@@ -38,23 +38,65 @@
     "stats": [
       {
         "label": "Apartments",
-        "value": "4"
+        "value": "8"
       },
       {
-        "label": "Apartment sizes",
-        "value": "46.6 to 90.4 sqm"
+        "label": "Roof",
+        "value": "New mansard"
       },
       {
         "label": "Windows",
         "value": "Sash, reinstated"
       }
     ],
-    "planningRoute": "Office to residential conversion",
-    "unitsAfter": "4 apartments"
+    "planningRoute": "Class MA prior approval, then full planning",
+    "unitsAfter": "8 apartments"
   },
   "writeup": {
     "challenge": "The building sits in the middle of Winchester, a city where what the building looks like from the street is not a detail. It had picked up modern uPVC windows along the way, which is the sort of thing that reads as wrong on a High Street elevation long before anyone can say why.",
     "approach": "Four apartments: two at ground floor of 90 and 90.4 sqm, and two above at 46.6 and 69.9 sqm, each with its own kitchen and lounge, bathroom and hall. All the modern uPVC windows are replaced with traditional design sash windows, sized to the existing openings, with the contractor pricing both timber and uPVC alternatives so the client could make that call on cost rather than have it made for them. A new front courtyard was proposed to the street.",
     "outcome": "Documented to tender. The fire strategy does the heavy lifting on a conversion like this: a 60-minute protected stairwell serving all four flats, every steel encased to 60 minutes, and a 60-minute rating to the hallway and landings. The drone footage on our homepage is this building's own street."
+  },
+  "projectStory": {
+    "summary": [
+      "The comprehensive redevelopment of a substantial former office building at the top of Winchester High Street, converting the existing commercial accommodation into eight new residential apartments within a highly sensitive heritage setting. The property sits immediately adjoining a Grade I listed building, surrounded by further listed buildings and within the Winchester Conservation Area.",
+      "The proposals include a complete internal reconfiguration, extensive fenestration changes, replacement windows, external alterations and a new mansard roof extension providing additional accommodation at roof level. An initial proposal for a full additional storey was developed through feasibility and pre-application consultation before the design evolved into the more contextually appropriate mansard solution. The scheme also incorporates new landscaping and a complete interior design package for all eight apartments.",
+      "Thistle Architecture has been involved from the initial feasibility stage, progressing the project through pre-application consultation, Class MA Prior Approval, listed building and heritage considerations, and full planning permission for the wider external alterations and mansard extension. Our involvement has continued through Stage 4 technical design, full interior design and the construction phase.",
+      "The project is due to complete in 2027, transforming a prominent commercial building into eight high-quality apartments while carefully responding to one of Winchester's most sensitive historic settings."
+    ],
+    "sections": [
+      {
+        "title": "CGI And Interior Design",
+        "caption": "The building as proposed from the High Street, with the mansard and the reinstated sash windows.",
+        "images": [
+          {
+            "src": "/images/projects/monument-house-render-2.webp",
+            "alt": "Visualisation of Monument House from the High Street",
+            "kind": "drawing"
+          },
+          {
+            "src": "/images/projects/monument-house-render-1.webp",
+            "alt": "Visualisation of the converted building and mansard",
+            "kind": "drawing"
+          }
+        ]
+      },
+      {
+        "title": "Planning",
+        "caption": "Proposed drawings from the planning submission for the conversion, the external alterations and the mansard extension.",
+        "images": [
+          {
+            "src": "/images/projects/monument-house-1.png",
+            "alt": "Proposed plans for the apartments",
+            "kind": "drawing"
+          },
+          {
+            "src": "/images/projects/monument-house-2.png",
+            "alt": "Proposed elevations with the mansard roof extension",
+            "kind": "drawing"
+          }
+        ]
+      }
+    ]
   }
 }
