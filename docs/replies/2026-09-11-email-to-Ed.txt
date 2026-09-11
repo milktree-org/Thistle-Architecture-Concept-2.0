@@ -2,27 +2,15 @@ Subject: Re: Final website updates & feasibility journey
 
 Hi Ed,
 
-Thanks, the document came through this time and everything in it is on the site. The tracker is attached, updated to today; same document, same numbers. By number:
+Thanks, the document came through and everything in it is live. Updated tracker attached, same numbers.
 
-66 and 62: The Decision and the roadmap are on Harpenden, Axis House, Greyfriars and Southgate, word for word. Greyfriars is rewritten in full, card and page: eight flats against a seventeen-room HMO, the phased Class MA then full planning route, and the card stat now reads 17 en suite. Since the co-living scheme is in full planning, Greyfriars also sits under Projects as In planning, the same way Axis House does.
+Done today: the Decision and roadmap on Harpenden, Axis House, Greyfriars and Southgate; Greyfriars rewritten in full and also under Projects as In planning; the cost article on your figures; the three bios; section 8 back to the greater of £1,000,000 and ten times the fee.
 
-93: The cost article carries your table. Three current sources for the headline range, the Build Store method costs replaced by the relative position by structure, project manager 5 to 10 per cent, insurance, services, contingency, survey and kitchens updated, the planning fee added, ICF corrected and the stamp duty line rewritten. It is dated September 2026 and names the sources.
+43: same reading here. We are on 3.12.1 and the October change needs 3.12 or above, so it does not touch us.
 
-98 and 29: The three bios are under Kaan, Jan and Seyma on the team page.
+One thing blocks 36, 46, 7 and 12: we have never had a link to the SharePoint share, so I cannot reach the Southgate nine-bed drawing, Project Explanations.docx or the Clausentum drawings. Send the share link, or attach the files here, and they go on the same day. On 46, the document covers Monument House and 162 Millbrook; the other nine older-layout pages (81 The Crescent, Bishopstoke Road, Burlington Road, Derby Road, George Street, Project Prince, Queens Road, Shadwell Road, Southsea Co-Living) are yours to write.
 
-58: Section 8 reads "limited in aggregate to the greater of (a) £1,000,000 and (b) ten times the fees paid to us for this report", PI limit £1,000,000 as before.
-
-43: Same reading here. The lockfile has TinaCMS at 3.12.1, and TinaCloud's October move to WorkOS sign-in needs 3.12 or above, so it does not affect us. Come back on anything you find missing in the fields.
-
-36, 46, 7 and 12: One thing blocks all four. We have never had a link to the SharePoint share; the folder names you describe are the first we have seen of its structure, and the addresses we tried do not resolve. Send the share link (or attach the files to this thread) and on the same day:
-- The nine-bed Southgate drawing goes on with your caption.
-- Project Explanations.docx goes onto the two pages it covers. Of the eleven pages still on the older layout (twelve before Eastleigh HMO merged into George Street), the document covers Monument House and 162 Millbrook. The nine it does not cover: 81 The Crescent, Bishopstoke Road, Burlington Road, Derby Road, George Street, Project Prince, Queens Road, Shadwell Road and Southsea Co-Living. Those are yours to write.
-- Clausentum gets a page from its two drawings.
-Bedhampton, Chalkridge and High End Residential close with nothing to add, as you said.
-
-47: A scope and price for the chatbot will follow separately.
-
-34, GA4, Trustpilot and Kaan's tier field: noted, and waiting on the CRM transfer and on you respectively.
+Chatbot scope and price to follow separately.
 
 Best,
 Akash
