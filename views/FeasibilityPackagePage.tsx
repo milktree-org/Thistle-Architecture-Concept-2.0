@@ -271,7 +271,10 @@ export const FeasibilityPackagePage: React.FC<FeasibilityPackagePageProps> = ({ 
             </p>
           </Reveal>
           <Reveal delay={0.3}>
-            <a href="#instant-quote">
+            {/* Straight to the calculator (Ed, 14 September 2026). It used to
+                scroll to the product cards, whose £298 button then went to the
+                calculator: two clicks to reach the thing the label promises. */}
+            <a href="/pricing#calculator">
               <Button size="lg" variant="primary" icon={<ArrowUpRight size={18} />} data-tina-field={f(p?.hero, 'ctaLabel')}>
                 {hero.ctaLabel}
               </Button>

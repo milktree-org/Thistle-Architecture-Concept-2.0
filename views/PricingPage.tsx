@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { Button } from '../components/ui/Button';
 import { useTina } from 'tinacms/dist/react';
 import { ArrowUpRight, Check } from 'lucide-react';
 import { PageHero } from '../components/ui/PageHero';
@@ -72,7 +73,7 @@ const PRODUCTS_COPY_FALLBACK = {
 const CALCULATOR_FALLBACK = {
   eyebrow: 'Architectural Feasibility',
   heading: 'Get Your Fixed Fee.',
-  lede: 'Eight questions, about a minute. Straightforward projects get a price on screen. Anything larger or more involved routes to a free Expert Session, because a scope we have not seen is not one we will put a number on.',
+  lede: 'Seven questions, about a minute. Straightforward projects get a price on screen. Anything larger or more involved routes to a free Expert Session, because a scope we have not seen is not one we will put a number on.',
 };
 
 const FEE_FACTORS_COPY_FALLBACK = {
@@ -295,7 +296,16 @@ export const PricingPage: React.FC<PricingPageProps> = ({ settings, reviews, pag
           heading: f(p?.hero, 'heading'),
           description: f(p?.hero, 'description'),
         }}
-      />
+      >
+        {/* Ed, 14 September 2026: the button to get an architectural fee sat
+            below the fold, under the product ladder. It is in the header now
+            so nobody has to scroll to find it. Same destination as the card. */}
+        <Link href="#calculator" className="inline-block">
+          <Button size="lg" variant="primary" icon={<ArrowUpRight size={18} />}>
+            Get Your Instant Fixed Fee
+          </Button>
+        </Link>
+      </PageHero>
 
       {/* The four products */}
       <section className="px-fl-margin pb-fl-section bg-thistle-white">

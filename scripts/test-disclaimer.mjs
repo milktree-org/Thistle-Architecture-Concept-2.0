@@ -30,7 +30,11 @@ const body = await page.locator('body').innerText();
 ok('it shows a version number and date', /Version 1\.0 — 25 August 2026/.test(body));
 ok('the full text is there, not truncated', body.includes('The limit of our financial responsibility') && body.includes('governed by the law of England and Wales'));
 ok('nothing is hidden behind an accordion', (await page.locator('details').count()) === 0);
-ok('the two unset money figures are visible as gaps, not invented', (body.match(/\[amount to be confirmed\]/g) || []).length === 2);
+// Ed set both figures on 9 September 2026 and settled the cap wording on the
+// 11th: the greater of £1,000,000 and ten times the fee, PI limit £1,000,000.
+// Before that they rendered as visible gaps rather than invented numbers; now
+// the check is that neither gap is left.
+ok('the two money figures are the ones Ed set, with no gap left', /limited in aggregate to the greater of \(a\) £1,000,000 and \(b\) ten times the fees/.test(body) && body.includes('limit of indemnity of £1,000,000') && !body.includes('[amount to be confirmed]'));
 
 // --- the acceptance step, on both checkouts ---------------------------------
 
@@ -50,7 +54,6 @@ const revealArchitecturalFee = async (p) => {
   await pick('What do you want it to become', 'HMO');
   await pick('How many separate buildings', 'One');
   await pick('How many design options', 'One preferred option');
-  await pick('Do you have enough on the existing building', 'Yes');
   await p.getByPlaceholder('Full name').fill('Test Client');
   await p.getByPlaceholder('Email').fill('test@example.com');
   await p.getByPlaceholder('Phone').fill('07000000000');

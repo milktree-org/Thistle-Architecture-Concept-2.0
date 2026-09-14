@@ -41,7 +41,6 @@ interface Answers {
   extension: boolean;
   specialConstraint: boolean;
   masterplan: boolean;
-  info: string;
 }
 
 const EMPTY: Answers = {
@@ -59,7 +58,6 @@ const EMPTY: Answers = {
   extension: false,
   specialConstraint: false,
   masterplan: false,
-  info: '',
 };
 
 const EXISTING_USES = [
@@ -103,7 +101,12 @@ function toProject(a: Answers): ProjectInput {
     heritageGrade: a.heritage,
     // "1 preferred" is 1, "+1 alternative" is 2, "several" is 3+.
     numberOfDevelopmentStrategies: a.options === 'several' ? 3 : a.options === 'alternative' ? 2 : 1,
-    sufficientExistingInformation: a.info === 'yes',
+    // The "Do you have enough on the existing building?" question came out on
+    // 14 September 2026 at Ed's request: it read as vague and a client priced
+    // themselves into an Expert Session they did not want. The engine keeps
+    // the rule for a false, but nothing on this form sends one any more; what
+    // the client holds is established in the detailed brief after payment.
+    sufficientExistingInformation: true,
     proposedUseKnown: !!a.proposedUse && !proposedIsStop,
     mixedUse: a.proposedUse === 'mixed_use' || a.existingUse === 'mixed_use',
     significantExtension: a.extension,
@@ -261,7 +264,7 @@ export const FeasibilityCalculator: React.FC = () => {
   const contactReady = !!a.name.trim() && /.+@.+\..+/.test(a.email) && a.phone.trim().length >= 7;
   const ready =
     contactReady &&
-    (a.giaUnknown || !!a.gia) && !!a.existingUse && !!a.proposedUse && !!a.buildings && !!a.options && !!a.info;
+    (a.giaUnknown || !!a.gia) && !!a.existingUse && !!a.proposedUse && !!a.buildings && !!a.options;
 
   const result = useMemo(() => (submitted ? getFeasibilityRoute(toProject(a)) : null), [submitted, a]);
 
@@ -484,20 +487,6 @@ export const FeasibilityCalculator: React.FC = () => {
             ]}
             value={a.heritage}
             onChange={(v) => set('heritage', v as HeritageGrade)}
-          />
-        </Field>
-
-        <Field
-          label="Do you have enough on the existing building?"
-          hint="Plans, surveys, brochures, photos or planning history that show what is there now."
-        >
-          <Choice
-            options={[
-              { value: 'yes', label: 'Yes' },
-              { value: 'no', label: 'Not really' },
-            ]}
-            value={a.info}
-            onChange={(v) => set('info', v)}
           />
         </Field>
 

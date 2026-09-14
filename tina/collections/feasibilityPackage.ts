@@ -189,7 +189,7 @@ export const feasibilityPackageCollection: Collection = {
               name: 'ctaLabel',
               label: 'Button label',
               description:
-                'The main call to action. It scrolls to the product choice further down this page; where it goes is set in code, so only the wording is editable here.',
+                'The main call to action. It opens the fee calculator on the pricing page; where it goes is set in code, so only the wording is editable here.',
             },
             {
               type: 'string',

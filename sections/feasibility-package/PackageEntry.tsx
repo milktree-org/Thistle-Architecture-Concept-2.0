@@ -46,7 +46,7 @@ const FALLBACK = {
   architecturalBadge: 'Recommended',
   architecturalName: 'Architectural Feasibility',
   architecturalStrapline: 'Data, plus our design team: planning interpretation, sketch and layout testing, and a professional recommendation.',
-  architecturalBody: 'Everything in the automated appraisal, plus the sketch scheme and full report described below. Answer eight questions on the pricing page and your fixed fee is on screen.',
+  architecturalBody: 'Everything in the automated appraisal, plus the sketch scheme and full report described below. Answer seven questions on the pricing page and your fixed fee is on screen.',
   architecturalCtaLabel: 'Get Your Instant Fixed Fee',
   partnerPrefix: 'Only need a quick HMO screen?',
   partnerLinkLabel: 'HMO Checker Property Report, £15.99',
