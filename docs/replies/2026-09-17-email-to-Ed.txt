@@ -7,7 +7,7 @@ Thanks for the write-ups. All nine are live on the project template with your te
 Two things to check:
 
 1. Bishopstoke Road. Your list of the 9th said Completed 2024, but the write-up says March 2025. The page now says 2025. Tell me if 2024 was right.
-2. Southsea. The write-up names Festing Road, but on the 30th you asked for the street to come off that page. I have left it off, so it reads "in Southsea". Say if you want it back.
+2. Southsea. The write-up names Festing Road, but on the 30th you asked for the street to come off that page. I have left it off, so it reads "in Southsea". Say if you want it back. Related: the first two photographs on that page show the front of the house with the shop next door, which places it about as clearly as the street name does. They have been there since launch. Tell me if you want them taken off and the page opened on an interior instead.
 
 Also, while checking the pages I found the "Next Project" link at the foot of each one was still showing the old street names. That is fixed, and it now follows whatever title you set in the CMS.
 
