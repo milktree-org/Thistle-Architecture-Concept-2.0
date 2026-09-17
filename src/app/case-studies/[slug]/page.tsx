@@ -2,6 +2,7 @@ import { cache } from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { caseStudies } from '@/data/caseStudiesData';
+import { getCaseStudies } from '@/lib/caseStudies';
 import { CaseStudyDetailPage } from '@/views/CaseStudyDetailPage';
 import client from '@/tina/__generated__/client';
 import { str } from '@/lib/tina';
@@ -100,9 +101,20 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   // The raw query, variables and data are all handed down, not just the data:
   // useTina needs the query to re-run it against the editor's live values.
+  // The Next link at the foot of the page, worked out here from the live
+  // records. It used to come from the code copy, which still carried the old
+  // street-name titles, so a page read "Next Project: Derby Road" long after
+  // the project was retitled in the CMS. Same list and order as the listing.
+  const all = await getCaseStudies();
+  const self = all.find((c) => c.slug === slug);
+  const siblings = all.filter((c) => c.kind === (self?.kind ?? 'project'));
+  const at = siblings.findIndex((c) => c.slug === slug);
+  const nx = siblings.length ? siblings[(at + 1) % siblings.length] : undefined;
+
   return (
     <CaseStudyDetailPage
       page={doc ? { query: doc.query, variables: doc.variables, data: doc.data } : undefined}
+      next={nx && nx.slug !== slug ? { slug: nx.slug, title: nx.title } : undefined}
     />
   );
 }

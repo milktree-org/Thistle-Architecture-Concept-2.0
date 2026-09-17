@@ -91,5 +91,86 @@
       "src": "/images/uploads/images/projects/crescent-81/crescent-14.jpg",
       "kind": "drawing"
     }
-  ]
+  ],
+  "projectStory": {
+    "summary": [
+      "The conversion of an existing family house in Eastleigh into a six-bedroom HMO for professional tenants, with every bedroom given its own en suite rather than sharing bathrooms. The property sits outside an Article 4 area, so the change from a C3 house to a C4 HMO did not need a full planning application.",
+      "Each room was designed as a self-contained space. The en suites are oak-framed, with large-format stone tiling, quadrant showers and backlit mirrors. Every bedroom has a slatted timber headboard panel with integrated sockets, a desk set at the window, and storage in cane-fronted oak wardrobes and chests. Tea stations sit outside the bedrooms so the layout stays within the licensing standards on kitchen facilities.",
+      "HMO Designers, part of Thistle Group, took the project through the Lawful Development Certificate drawings, building regulations and the technical package, alongside the interior scheme. The palette was deliberately kept away from the grey and white that is standard at this level of the rental market, using oak, cream, terracotta and mustard throughout.",
+      "The project is complete and gives the property a clear point of difference in a crowded professional letting market."
+    ],
+    "sections": [
+      {
+        "title": "The Finished Building",
+        "caption": "Photographed on completion.",
+        "images": [
+          {
+            "src": "/images/uploads/images/projects/crescent-81/crescent-2.jpg",
+            "alt": "Six-Bed En-Suite HMO For Professionals, Eastleigh: photograph 1",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/uploads/images/projects/crescent-81/crescent-3.jpg",
+            "alt": "Six-Bed En-Suite HMO For Professionals, Eastleigh: photograph 2",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/uploads/images/projects/crescent-81/crescent-4.jpg",
+            "alt": "Six-Bed En-Suite HMO For Professionals, Eastleigh: photograph 3",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/uploads/images/projects/crescent-81/crescent-5.jpg",
+            "alt": "Six-Bed En-Suite HMO For Professionals, Eastleigh: photograph 4",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/uploads/images/projects/crescent-81/crescent-6.jpg",
+            "alt": "Six-Bed En-Suite HMO For Professionals, Eastleigh: photograph 5",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/uploads/images/projects/crescent-81/crescent-7.jpg",
+            "alt": "Six-Bed En-Suite HMO For Professionals, Eastleigh: photograph 6",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/uploads/images/projects/crescent-81/crescent-8.jpg",
+            "alt": "Six-Bed En-Suite HMO For Professionals, Eastleigh: photograph 7",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/uploads/images/projects/crescent-81/crescent-9.jpg",
+            "alt": "Six-Bed En-Suite HMO For Professionals, Eastleigh: photograph 8",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/uploads/images/projects/crescent-81/crescent-10.jpg",
+            "alt": "Six-Bed En-Suite HMO For Professionals, Eastleigh: photograph 9",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/uploads/images/projects/crescent-81/crescent-11.jpg",
+            "alt": "Six-Bed En-Suite HMO For Professionals, Eastleigh: photograph 10",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/uploads/images/projects/crescent-81/crescent-12.jpg",
+            "alt": "Six-Bed En-Suite HMO For Professionals, Eastleigh: photograph 11",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/uploads/images/projects/crescent-81/crescent-13.jpg",
+            "alt": "Six-Bed En-Suite HMO For Professionals, Eastleigh: photograph 12",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/uploads/images/projects/crescent-81/crescent-14.jpg",
+            "alt": "Six-Bed En-Suite HMO For Professionals, Eastleigh: photograph 13",
+            "kind": "photo"
+          }
+        ]
+      }
+    ]
+  }
 }

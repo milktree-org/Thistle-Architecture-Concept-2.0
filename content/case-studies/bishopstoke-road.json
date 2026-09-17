@@ -1,6 +1,6 @@
 {
   "kind": "project",
-  "title": "Family House To En-Suite HMO",
+  "title": "House To Seven-Bed En-Suite HMO",
   "location": "Eastleigh, Hampshire",
   "tag": "HMO",
   "desc": "A house converted to an HMO in Eastleigh, built around a full-length navy kitchen that runs the depth of the plan into a rooflit dining room.",
@@ -86,10 +86,91 @@
         "value": "Marble tiled"
       }
     ],
-    "completionDate": "2024"
+    "completionDate": "2025"
   },
   "writeup": {
     "approach": "The whole ground floor is given over to one move: a navy shaker kitchen running the full depth of the house, brass handles, stone worktops, integrated ovens and laundry built in, opening at the far end into a dining room lit from above by a flat rooflight. Panelling to dado height carries through the dining room and up the staircase, all in the same navy, so the circulation reads as part of the design rather than as leftover space. The en suites are tiled floor to ceiling in white marble with backlit round mirrors.",
     "outcome": "Complete and photographed in March 2025. The rear opens onto a walled courtyard with paved terrace and planting beds, which on a mid-terrace plot is what stops a house at this occupancy feeling closed in."
+  },
+  "projectStory": {
+    "summary": [
+      "The conversion of a mid-terrace house in Eastleigh into a seven-bedroom en-suite HMO, completed in March 2025.",
+      "The ground floor is built around a navy shaker kitchen running the full depth of the house, with brass handles, stone worktops, integrated ovens and built-in laundry, opening into a rooflit dining area. Navy panelling runs from dado height through the dining room and up the staircase, tying the circulation spaces into the same scheme. The en suites are tiled floor to ceiling in white marble with backlit round mirrors.",
+      "HMO Designers, part of Thistle Group, designed the conversion and the interior scheme. On a mid-terrace plot the rear was treated as essential rather than leftover space, with a walled courtyard, paved terrace and planting beds so a high-occupancy house doesn't feel closed in.",
+      "The project is complete, delivering seven en-suite rooms with shared spaces that work as properly as the bedrooms."
+    ],
+    "sections": [
+      {
+        "title": "The Finished Building",
+        "caption": "Photographed on completion.",
+        "images": [
+          {
+            "src": "/images/projects/bishopstoke-road/bishopstoke-2.jpg",
+            "alt": "House To Seven-Bed En-Suite HMO, Eastleigh: photograph 1",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/bishopstoke-road/bishopstoke-3.jpg",
+            "alt": "House To Seven-Bed En-Suite HMO, Eastleigh: photograph 2",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/bishopstoke-road/bishopstoke-4.jpg",
+            "alt": "House To Seven-Bed En-Suite HMO, Eastleigh: photograph 3",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/bishopstoke-road/bishopstoke-5.jpg",
+            "alt": "House To Seven-Bed En-Suite HMO, Eastleigh: photograph 4",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/bishopstoke-road/bishopstoke-6.jpg",
+            "alt": "House To Seven-Bed En-Suite HMO, Eastleigh: photograph 5",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/bishopstoke-road/bishopstoke-7.jpg",
+            "alt": "House To Seven-Bed En-Suite HMO, Eastleigh: photograph 6",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/bishopstoke-road/bishopstoke-8.jpg",
+            "alt": "House To Seven-Bed En-Suite HMO, Eastleigh: photograph 7",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/bishopstoke-road/bishopstoke-9.jpg",
+            "alt": "House To Seven-Bed En-Suite HMO, Eastleigh: photograph 8",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/bishopstoke-road/bishopstoke-10.jpg",
+            "alt": "House To Seven-Bed En-Suite HMO, Eastleigh: photograph 9",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/bishopstoke-road/bishopstoke-11.jpg",
+            "alt": "House To Seven-Bed En-Suite HMO, Eastleigh: photograph 10",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/bishopstoke-road/bishopstoke-12.jpg",
+            "alt": "House To Seven-Bed En-Suite HMO, Eastleigh: photograph 11",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/bishopstoke-road/bishopstoke-13.jpg",
+            "alt": "House To Seven-Bed En-Suite HMO, Eastleigh: photograph 12",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/bishopstoke-road/bishopstoke-14.jpg",
+            "alt": "House To Seven-Bed En-Suite HMO, Eastleigh: photograph 13",
+            "kind": "photo"
+          }
+        ]
+      }
+    ]
   }
 }

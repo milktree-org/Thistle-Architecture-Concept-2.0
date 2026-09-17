@@ -1,6 +1,6 @@
 {
   "kind": "project",
-  "title": "Three-Bed Family House To Seven-Bed HMO",
+  "title": "Three-Bed House To Seven-Bed En-Suite HMO",
   "location": "Portsmouth, Hampshire",
   "tag": "HMO",
   "desc": "A three-bedroom city centre family house turned into a seven-bedroom high-end HMO, every room en suite.",
@@ -60,5 +60,46 @@
     "challenge": "The starting point was an ordinary three-bedroom family house in a city centre. Getting seven en suite rooms out of that means finding the rooms and the drainage for seven bathrooms at the same time, without leaving the shared space so thin that the house stops working for the people actually living in it.",
     "approach": "Managed end to end: existing surveys, proposals, planning and building regulations approval, then construction. The rear of the house opens into a communal living space under a glazed lantern, with bifold doors onto a small walled courtyard. On a tight urban plot that courtyard is how the shared amenity space gets won, and it is why the lounge does not feel like a leftover.",
     "outcome": "Complete, and in use as seven high-end en suite rooms."
+  },
+  "projectStory": {
+    "summary": [
+      "The conversion of a three-bedroom city centre family house in Portsmouth into a seven-bedroom high-end HMO, with every room en suite.",
+      "The challenge was fitting seven en-suite rooms into an ordinary family house, including the drainage for seven bathrooms, without losing the shared living space the residents need. The answer was at the rear, where the communal living space sits under a glazed lantern with bifold doors opening onto a walled courtyard, giving the tight urban plot usable shared amenity inside and out.",
+      "HMO Designers, part of Thistle Group, ran the project end to end, from surveys and proposals through planning approval and building regulations to management of the construction.",
+      "The project is complete and in use as seven high-end en-suite rooms."
+    ],
+    "sections": [
+      {
+        "title": "The Finished Building",
+        "caption": "Photographed on completion.",
+        "images": [
+          {
+            "src": "/images/projects/hmo-queens-road/queens-road-2.jpg",
+            "alt": "Three-Bed House To Seven-Bed En-Suite HMO, Portsmouth: photograph 1",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-queens-road/queens-road-3.jpg",
+            "alt": "Three-Bed House To Seven-Bed En-Suite HMO, Portsmouth: photograph 2",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-queens-road/queens-road-4.jpg",
+            "alt": "Three-Bed House To Seven-Bed En-Suite HMO, Portsmouth: photograph 3",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-queens-road/queens-road-5.jpg",
+            "alt": "Three-Bed House To Seven-Bed En-Suite HMO, Portsmouth: photograph 4",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-queens-road/queens-road-6.jpg",
+            "alt": "Three-Bed House To Seven-Bed En-Suite HMO, Portsmouth: photograph 5",
+            "kind": "photo"
+          }
+        ]
+      }
+    ]
   }
 }

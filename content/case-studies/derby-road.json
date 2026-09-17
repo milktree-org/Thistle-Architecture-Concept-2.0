@@ -1,9 +1,9 @@
 {
   "kind": "project",
-  "title": "Eight-Bed Ultra Luxury HMO",
+  "title": "Eight-Bed Ultra-Luxury HMO",
   "location": "Portsmouth, Hampshire",
   "tag": "HMO",
-  "desc": "An eight-bedroom ultra luxury HMO on the south coast, built around a rooflit living and dining space at the back of the house.",
+  "desc": "An eight-bedroom ultra-luxury HMO in Portsmouth, built around a rooflit living and dining space at the back of the house.",
   "image": {
     "src": "/images/projects/hmo-derby-road/derby-road-1.jpg",
     "kind": "drawing"
@@ -75,5 +75,66 @@
   "writeup": {
     "approach": "The communal heart of the house is a rear living and dining room lit by a large flush rooflight, with French doors to the outside. The finish is pitched well above the standard letting specification: wall lights either side of a sculptural panel, cane and black timber dining chairs, and a soft palette that reads as a home rather than a room let by the week.",
     "outcome": "Complete and let. HMO Designers worked as part of the wider project team on this scheme rather than as sole designer, so the credit is shared with the others involved."
+  },
+  "projectStory": {
+    "summary": [
+      "An ultra-luxury eight-bedroom HMO in Portsmouth, created from an existing dwelling as high-specification accommodation for professional tenants.",
+      "The heart of the house is the rear living and dining space, lit by a large flush rooflight with French doors opening outside. Wall lights either side of a sculptural panel, cane and black timber dining chairs and a soft palette make the room read as a home rather than a room let by the week.",
+      "HMO Designers, part of Thistle Group, worked as part of a collaborative design and build team on this project rather than as the sole designer.",
+      "The scheme is complete and let, and is a good example of the standard of accommodation now coming to the top end of the HMO market."
+    ],
+    "sections": [
+      {
+        "title": "The Finished Building",
+        "caption": "Photographed on completion.",
+        "images": [
+          {
+            "src": "/images/projects/hmo-derby-road/derby-road-2.jpg",
+            "alt": "Eight-Bed Ultra-Luxury HMO, Portsmouth: photograph 1",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-derby-road/derby-road-3.jpg",
+            "alt": "Eight-Bed Ultra-Luxury HMO, Portsmouth: photograph 2",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-derby-road/derby-road-4.jpg",
+            "alt": "Eight-Bed Ultra-Luxury HMO, Portsmouth: photograph 3",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-derby-road/derby-road-5.jpg",
+            "alt": "Eight-Bed Ultra-Luxury HMO, Portsmouth: photograph 4",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-derby-road/derby-road-6.jpg",
+            "alt": "Eight-Bed Ultra-Luxury HMO, Portsmouth: photograph 5",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-derby-road/derby-road-7.jpg",
+            "alt": "Eight-Bed Ultra-Luxury HMO, Portsmouth: photograph 6",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-derby-road/derby-road-8.jpg",
+            "alt": "Eight-Bed Ultra-Luxury HMO, Portsmouth: photograph 7",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-derby-road/derby-road-9.jpg",
+            "alt": "Eight-Bed Ultra-Luxury HMO, Portsmouth: photograph 8",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-derby-road/derby-road-10.jpg",
+            "alt": "Eight-Bed Ultra-Luxury HMO, Portsmouth: photograph 9",
+            "kind": "photo"
+          }
+        ]
+      }
+    ]
   }
 }

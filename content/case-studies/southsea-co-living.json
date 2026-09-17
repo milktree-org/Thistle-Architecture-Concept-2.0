@@ -1,6 +1,6 @@
 {
   "kind": "project",
-  "title": "Victorian Terrace To Eight-Bed Co-Living",
+  "title": "Victorian Terrace To Eight-Bed Luxury Co-Living",
   "location": "Southsea, Portsmouth",
   "tag": "Co-Living",
   "desc": "An eight-bedroom luxury co-living conversion inside a bay-fronted Victorian terrace in Southsea.",
@@ -70,7 +70,7 @@
   "listing": {
     "order": 210,
     "provenance": "By HMO Designers, part of Thistle Group",
-    "status": "Consented",
+    "status": "Complete",
     "conversionTypes": [
       "co-living-large-hmo",
       "hmo"
@@ -87,13 +87,99 @@
         "value": "Luxury co-living"
       },
       {
-        "label": "Building",
-        "value": "Victorian terrace"
+        "label": "HMO Awards 2024",
+        "value": "Highly Commended"
       }
     ]
   },
   "writeup": {
     "approach": "The building is a bay-fronted Victorian terrace on A residential street with dormers already in the roof and shops either side. Inside, the communal floor runs open plan: kitchen, dining and living in one length on a herringbone floor, with the kitchen tucked along the far wall rather than closed off. That single decision is what makes co-living work here. Eight people sharing a corridor is a house share; eight people sharing a room this size is somewhere you would choose to live.",
     "outcome": "Complete, and the most recent of the practice's Portsmouth HMO projects."
+  },
+  "projectStory": {
+    "summary": [
+      "The conversion of a bay-fronted Victorian terrace in Southsea into an eight-bedroom luxury co-living house for professionals, working with the existing roof dormers.",
+      "The critical decision was where the kitchen went. Rather than isolating it, the scheme opens the communal floor into a single kitchen, dining and living space laid on herringbone flooring. Eight people sharing a corridor is a house share; eight people sharing a room this size is somewhere you'd choose to live.",
+      "HMO Designers, part of Thistle Group, designed the conversion and the interior scheme for the co-living accommodation.",
+      "The project is complete and was Highly Commended for Best Co-Living Space Design at the 2024 HMO Awards."
+    ],
+    "sections": [
+      {
+        "title": "The Finished Building",
+        "caption": "Photographed on completion.",
+        "images": [
+          {
+            "src": "/images/projects/hmo-southsea-co-living/southsea-co-living-1.jpg",
+            "alt": "Victorian Terrace To Eight-Bed Luxury Co-Living, Southsea: photograph 1",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-southsea-co-living/southsea-co-living-2.jpg",
+            "alt": "Victorian Terrace To Eight-Bed Luxury Co-Living, Southsea: photograph 2",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-southsea-co-living/southsea-co-living-4.jpg",
+            "alt": "Victorian Terrace To Eight-Bed Luxury Co-Living, Southsea: photograph 3",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-southsea-co-living/southsea-co-living-5.jpg",
+            "alt": "Victorian Terrace To Eight-Bed Luxury Co-Living, Southsea: photograph 4",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-southsea-co-living/southsea-co-living-6.jpg",
+            "alt": "Victorian Terrace To Eight-Bed Luxury Co-Living, Southsea: photograph 5",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-southsea-co-living/southsea-co-living-7.jpg",
+            "alt": "Victorian Terrace To Eight-Bed Luxury Co-Living, Southsea: photograph 6",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-southsea-co-living/southsea-co-living-8.jpg",
+            "alt": "Victorian Terrace To Eight-Bed Luxury Co-Living, Southsea: photograph 7",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-southsea-co-living/southsea-co-living-9.jpg",
+            "alt": "Victorian Terrace To Eight-Bed Luxury Co-Living, Southsea: photograph 8",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-southsea-co-living/southsea-co-living-10.jpg",
+            "alt": "Victorian Terrace To Eight-Bed Luxury Co-Living, Southsea: photograph 9",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-southsea-co-living/southsea-co-living-11.jpg",
+            "alt": "Victorian Terrace To Eight-Bed Luxury Co-Living, Southsea: photograph 10",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-southsea-co-living/southsea-co-living-12.jpg",
+            "alt": "Victorian Terrace To Eight-Bed Luxury Co-Living, Southsea: photograph 11",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-southsea-co-living/southsea-co-living-13.jpg",
+            "alt": "Victorian Terrace To Eight-Bed Luxury Co-Living, Southsea: photograph 12",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-southsea-co-living/southsea-co-living-14.jpg",
+            "alt": "Victorian Terrace To Eight-Bed Luxury Co-Living, Southsea: photograph 13",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-southsea-co-living/southsea-co-living-15.jpg",
+            "alt": "Victorian Terrace To Eight-Bed Luxury Co-Living, Southsea: photograph 14",
+            "kind": "photo"
+          }
+        ]
+      }
+    ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "kind": "project",
-  "title": "Seven-Bed High-End HMO, Southend-on-Sea",
+  "title": "Seven-Bed High-End HMO",
   "location": "Southend-on-Sea, Essex",
   "tag": "HMO",
   "desc": "A high-end seven-bedroom HMO in Southend-on-Sea, with seven individually let en suite rooms and shared amenities.",
@@ -75,5 +75,66 @@
   "writeup": {
     "approach": "Seven rooms, each individually let and each with its own en suite, alongside the shared amenity space. The bedrooms carry the high-end brief properly rather than decoratively: deep colour taken across the walls and the ceiling, slatted timber panelling behind the bed, and a pendant hung either side instead of one light in the middle of the room.",
     "outcome": "Complete, and let to professionals in the area. It is a fair demonstration of what a high-end brief buys when the team specialises in HMOs."
+  },
+  "projectStory": {
+    "summary": [
+      "A high-end seven-bedroom HMO in Southend-on-Sea, created from an existing dwelling, with seven individually let en-suite rooms and shared amenity space.",
+      "The bedrooms carry the high-end brief properly rather than decoratively. Deep colour is taken across the walls and ceiling, slatted timber panelling sits behind the bed, and pendants hang either side instead of a single light in the middle of the room.",
+      "HMO Designers, part of Thistle Group, designed the scheme to a high-end brief for professional tenants.",
+      "The project is complete and let to professionals in the area, and shows what a high-end brief achieves when the team specialises in HMOs."
+    ],
+    "sections": [
+      {
+        "title": "The Finished Building",
+        "caption": "Photographed on completion.",
+        "images": [
+          {
+            "src": "/images/projects/hmo-project-prince/project-prince-2.jpg",
+            "alt": "Seven-Bed High-End HMO, Southend-on-Sea: photograph 1",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-project-prince/project-prince-3.jpg",
+            "alt": "Seven-Bed High-End HMO, Southend-on-Sea: photograph 2",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-project-prince/project-prince-4.jpg",
+            "alt": "Seven-Bed High-End HMO, Southend-on-Sea: photograph 3",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-project-prince/project-prince-5.jpg",
+            "alt": "Seven-Bed High-End HMO, Southend-on-Sea: photograph 4",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-project-prince/project-prince-6.jpg",
+            "alt": "Seven-Bed High-End HMO, Southend-on-Sea: photograph 5",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-project-prince/project-prince-7.jpg",
+            "alt": "Seven-Bed High-End HMO, Southend-on-Sea: photograph 6",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-project-prince/project-prince-8.jpg",
+            "alt": "Seven-Bed High-End HMO, Southend-on-Sea: photograph 7",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-project-prince/project-prince-9.jpg",
+            "alt": "Seven-Bed High-End HMO, Southend-on-Sea: photograph 8",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-project-prince/project-prince-10.jpg",
+            "alt": "Seven-Bed High-End HMO, Southend-on-Sea: photograph 9",
+            "kind": "photo"
+          }
+        ]
+      }
+    ]
   }
 }

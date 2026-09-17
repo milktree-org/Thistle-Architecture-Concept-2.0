@@ -125,9 +125,11 @@ interface CaseStudyDetailPageProps {
    * Optional so the page still renders if it is mounted without it.
    */
   page?: TinaQuery;
+  /** The next case study in the same list, resolved on the server from the CMS. */
+  next?: { slug: string; title: string };
 }
 
-export const CaseStudyDetailPage: React.FC<CaseStudyDetailPageProps> = ({ page }) => {
+export const CaseStudyDetailPage: React.FC<CaseStudyDetailPageProps> = ({ page, next }) => {
   const { slug } = useParams<{ slug: string }>();
 
   // useTina returns the server data verbatim on the public site and swaps in
@@ -195,7 +197,7 @@ export const CaseStudyDetailPage: React.FC<CaseStudyDetailPageProps> = ({ page }
   // link cancels the navigation.
   const siblings = caseStudies.filter(c => c.kind === kind);
   const idx = siblings.findIndex(c => c.slug === slug);
-  const nextCase = siblings[(idx + 1) % siblings.length];
+  const nextCase = next ?? siblings[(idx + 1) % siblings.length];
 
   // Lists are all-or-nothing rather than merged item by item: the record in
   // code stands in only while the CMS has no list at all, because an editor

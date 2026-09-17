@@ -1,0 +1,21 @@
+Subject: Re: Final website updates & feasibility journey
+
+Hi Ed,
+
+Thanks for the write-ups. All nine are live on the project template with your text and their photographs, and the titles follow your headings. Southsea Co-Living now reads Complete, with the HMO Awards commendation in its key facts, and Derby Road keeps your wording on the wider design and build team. Updated tracker attached, same numbers.
+
+Two things to check:
+
+1. Bishopstoke Road. Your list of the 9th said Completed 2024, but the write-up says March 2025. The page now says 2025. Tell me if 2024 was right.
+2. Southsea. The write-up names Festing Road, but on the 30th you asked for the street to come off that page. I have left it off, so it reads "in Southsea". Say if you want it back.
+
+Also, while checking the pages I found the "Next Project" link at the foot of each one was still showing the old street names. That is fixed, and it now follows whatever title you set in the CMS.
+
+On 43, thanks for checking. That one is closed.
+
+Trustpilot. You don't need a login to send. At business.trustpilot.com choose Log in, then Forgot password, with the email the business account was set up under (probably yours or the old hello@incollective.works). Once you are in, go to Settings, Users, Invite user, and add akash@milktreeagency.com as an admin. If neither address reaches you, Trustpilot support can move the account to you once you write from a @thistlearchitecture.co.uk address. All we need is to see which plan the account is on and whether it includes a review widget.
+
+Noted on GA4, I will wait for your confirmation.
+
+Best,
+Akash

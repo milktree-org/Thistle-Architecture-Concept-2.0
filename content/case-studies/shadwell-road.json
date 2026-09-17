@@ -50,12 +50,12 @@
         "value": "7"
       },
       {
-        "label": "Completed",
-        "value": "2023"
-      },
-      {
         "label": "Thistle role",
         "value": "Feasibility to approvals"
+      },
+      {
+        "label": "Communal",
+        "value": "Rooflit lantern room"
       }
     ],
     "completionDate": "2023"
@@ -63,5 +63,51 @@
   "writeup": {
     "approach": "The instruction started with a feasibility study of the building as it stood, then the relevant surveys, then planning and building regulations approval. The communal room sits at the rear under a glazed lantern with French doors to the yard, finished in sage green with pale timber, so the shared space is the brightest room in the house rather than the one nobody uses.",
     "outcome": "Completed in 2023."
+  },
+  "projectStory": {
+    "summary": [
+      "The conversion of an existing dwelling in Portsmouth into a seven-bedroom HMO, completed in 2023.",
+      "The communal room was placed at the rear under a glazed lantern, with French doors to the yard and a finish of sage green and pale timber. The intention was for the shared space to be the brightest room in the house rather than the one nobody uses.",
+      "HMO Designers, part of Thistle Group, took the project from feasibility through surveys to planning and building regulations approvals.",
+      "The project is complete, with seven bedrooms and a shared space that residents actually use."
+    ],
+    "sections": [
+      {
+        "title": "The Finished Building",
+        "caption": "Photographed on completion.",
+        "images": [
+          {
+            "src": "/images/projects/hmo-shadwell-road/shadwell-road-2.jpg",
+            "alt": "Seven-Bed HMO, Feasibility To Approvals, Portsmouth: photograph 1",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-shadwell-road/shadwell-road-3.jpg",
+            "alt": "Seven-Bed HMO, Feasibility To Approvals, Portsmouth: photograph 2",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-shadwell-road/shadwell-road-4.jpg",
+            "alt": "Seven-Bed HMO, Feasibility To Approvals, Portsmouth: photograph 3",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-shadwell-road/shadwell-road-5.jpg",
+            "alt": "Seven-Bed HMO, Feasibility To Approvals, Portsmouth: photograph 4",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-shadwell-road/shadwell-road-6.jpg",
+            "alt": "Seven-Bed HMO, Feasibility To Approvals, Portsmouth: photograph 5",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-shadwell-road/shadwell-road-7.jpg",
+            "alt": "Seven-Bed HMO, Feasibility To Approvals, Portsmouth: photograph 6",
+            "kind": "photo"
+          }
+        ]
+      }
+    ]
   }
 }

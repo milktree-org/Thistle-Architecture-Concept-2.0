@@ -1,6 +1,6 @@
 {
   "kind": "project",
-  "title": "Seven-Bed HMO, En Suites Under New Rooflights",
+  "title": "Seven-Bed HMO With Loft En Suites",
   "location": "Southampton, Hampshire",
   "tag": "HMO",
   "desc": "A seven-bedroom HMO in Southampton delivered to an essential specification, with en suite rooms worked into the roof under new rooflights.",
@@ -58,12 +58,12 @@
         "value": "7"
       },
       {
-        "label": "Completed",
-        "value": "2023"
-      },
-      {
         "label": "Specification",
         "value": "Essential"
+      },
+      {
+        "label": "Loft rooms",
+        "value": "En suite, rooflit"
       }
     ],
     "completionDate": "2023"
@@ -71,5 +71,61 @@
   "writeup": {
     "approach": "A feasibility study of the existing property came first, then the surveys, then planning and building regulations approval. The loft rooms take their light from new rooflights set into the slope, and each has its own shower room off the bedroom. That is what keeps a seven-bed count workable in a house of this size without any room feeling like the short straw.",
     "outcome": "Completed in 2023."
+  },
+  "projectStory": {
+    "summary": [
+      "The conversion of an existing dwelling in Southampton into a seven-bedroom HMO, delivered to an essential specification and completed in 2023.",
+      "The key to the layout was the roof space. New rooflights set into the pitched roof bring daylight into the loft bedrooms, and each room has its own shower room, so the upper rooms hold the same standard as those below rather than being the compromise rooms in the house.",
+      "HMO Designers, part of Thistle Group, started with a feasibility study to establish the achievable room count, then progressed the surveys, planning and building regulations approvals.",
+      "The project is complete, showing how careful planning of the roof space can add bedrooms without giving up the quality of the rooms."
+    ],
+    "sections": [
+      {
+        "title": "The Finished Building",
+        "caption": "Photographed on completion.",
+        "images": [
+          {
+            "src": "/images/projects/hmo-burlington-road/burlington-road-2.jpg",
+            "alt": "Seven-Bed HMO With Loft En Suites, Southampton: photograph 1",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-burlington-road/burlington-road-3.jpg",
+            "alt": "Seven-Bed HMO With Loft En Suites, Southampton: photograph 2",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-burlington-road/burlington-road-4.jpg",
+            "alt": "Seven-Bed HMO With Loft En Suites, Southampton: photograph 3",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-burlington-road/burlington-road-5.jpg",
+            "alt": "Seven-Bed HMO With Loft En Suites, Southampton: photograph 4",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-burlington-road/burlington-road-6.jpg",
+            "alt": "Seven-Bed HMO With Loft En Suites, Southampton: photograph 5",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-burlington-road/burlington-road-7.jpg",
+            "alt": "Seven-Bed HMO With Loft En Suites, Southampton: photograph 6",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-burlington-road/burlington-road-8.jpg",
+            "alt": "Seven-Bed HMO With Loft En Suites, Southampton: photograph 7",
+            "kind": "photo"
+          },
+          {
+            "src": "/images/projects/hmo-burlington-road/burlington-road-9.jpg",
+            "alt": "Seven-Bed HMO With Loft En Suites, Southampton: photograph 8",
+            "kind": "photo"
+          }
+        ]
+      }
+    ]
   }
 }
