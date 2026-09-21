@@ -27,10 +27,8 @@ export interface PackagePerson {
 // reason to buy the design-led service", and add Jodi as the first point of
 // contact for Expert Sessions. Bios follow his wording closely.
 //
-// Jodi has no photo yet (About page's own note: no photo in the client's Team
-// Photos folder for her), so her card uses an initials avatar rather than
-// inventing or borrowing one, same discipline the About page roster follows
-// for anyone whose details are not yet confirmed.
+// Jodi's portrait arrived from Ed on 18 September 2026 and replaced a stand-in.
+// Full names throughout, per item 98.
 //
 // Now a fallback rather than this section's only copy: the same strings live in
 // content/feasibility/package.json, seeded byte-for-byte from here.
@@ -42,15 +40,16 @@ const PEOPLE_FALLBACK: PackagePerson[] = [
     image: "/images/team/ed.jpg",
   },
   {
-    name: "Kaan",
+    name: "Kaan Taskin",
     role: "Design & Planning Lead",
     line: "BArch. Runs every feasibility from sketch scheme to sign-off, with 5+ years across residential and HMO planning, from deal sourcing through to submission.",
     image: "/images/team/kaan.jpg",
   },
   {
-    name: "Jodi",
+    name: "Jodi Edgley",
     role: "Business Development & Expert Sessions",
     line: "A property sales background and strong HMO and developer knowledge. Jodi is the first point of contact for a free Expert Session: she helps you understand the opportunity, clarify your objectives, and choose the right feasibility route.",
+    image: "/images/uploads/Jodi-Edgley.webp",
   },
 ];
 

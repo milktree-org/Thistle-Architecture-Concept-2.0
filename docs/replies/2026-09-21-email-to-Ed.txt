@@ -1,0 +1,30 @@
+Subject: Re: Final website updates & feasibility journey
+
+Hi Ed,
+
+Thanks, that closes the list. Updated tracker attached: 98 done, the rest parked, waiting on Kaan, or on us.
+
+From your email, live today:
+- Beauchamp House now opens on your photo of the front under scaffold, and it leads the Construction section.
+- Jodi's portrait is on the About page and the feasibility package page. The package page now uses full names too.
+- Bishopstoke 2025 and the Southsea photographs stay as they are.
+
+One snag: the Beverley file you sent is identical to the one already on the site, so there is nothing sharper to swap in. If the photographer has the original camera file, send that. If not, the current one stays.
+
+Trustpilot: yes to a screen share. Send me two or three times that suit you next week and I'll book one.
+
+GA4: thanks for setting up thistleanalytics@gmail.com. Rather than making that address an admin on Milktree's Analytics account, I'd move the three properties into an account you own. They keep their history and tracking ID, and it gives you the account itself, not just access to it. For the move, add akash@milktreeagency.com as an admin on your account once you've created it, and I'll do it the same day.
+
+Handover: agreed, we're there. The order matters so neither site stops building:
+1. GitHub first. Create a GitHub organisation for Thistle and tell me its name. We transfer both repos into it and reconnect Vercel.
+2. Vercel second. Invite akash@milktreeagency.com to your thistle-architecture team, and make sure it has a payment method on file. We then move both projects across. Vercel moves the settings and domains with them, with no downtime.
+3. Tina Cloud, to you as owner.
+4. Analytics, as above.
+5. GoHighLevel, with Levi's CRM transfer.
+
+One thing to know once Vercel is yours: it only builds commits from people on your team. Anyone at Milktree still working on the sites will need a seat on it.
+
+Chatbot scope and price will follow separately.
+
+Best,
+Akash

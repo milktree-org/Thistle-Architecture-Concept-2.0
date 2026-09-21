@@ -5,8 +5,8 @@
   "tag": "Office to Flats",
   "desc": "A Regency building on Kenilworth Road being converted from offices into four flats, from the basement up into the roof.",
   "image": {
-    "src": "/images/projects/beauchamp2/exterior.jpg",
-    "kind": "drawing"
+    "src": "/images/projects/beauchamp2/scaffold-front-2026-09.webp",
+    "kind": "photo"
   },
   "buildingType": "Period office building",
   "galleryImages": [
@@ -44,8 +44,13 @@
       },
       {
         "title": "Construction",
-        "caption": "Stripped back to structure internally, with the building scaffolded for the window replacement and external alterations.",
+        "caption": "Stripped back to structure internally, with the building scaffolded for the window replacement and external alterations. The front, photographed on site in September 2026.",
         "images": [
+          {
+            "src": "/images/projects/beauchamp2/scaffold-front-2026-09.webp",
+            "alt": "Beauchamp House under scaffold from the street, September 2026",
+            "kind": "photo"
+          },
           {
             "src": "/images/projects/beauchamp2/stripout-1.jpg",
             "alt": "An interior stripped back to brick and joists during conversion",
