@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { pruneEmpty } from '../../lib/tina';
-import { SAMPLE_REPORT_PATH } from '../../lib/sampleReport';
+import { SAMPLE_REPORT_PATH, SAMPLE_REPORT_PARTS } from '../../lib/sampleReport';
 
 const emailOk = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 
@@ -16,7 +16,7 @@ const emailOk = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 // matching what the form has just done.
 const FALLBACK = {
   heading: 'Read a real report first.',
-  body: 'Enter your email and we will send you a full feasibility from a real project, with the client details removed. Fifteen pages: the overview, the planning research, the space standards and the sketch layout.',
+  body: 'Enter your email and we will send you a full feasibility from a real project in Luton, with the client not named. Fifteen pages: the overview, the planning research, the space standards and the sketch layout.',
   privacyNote: 'No spam. Just the report and one follow-up.',
 };
 
@@ -85,6 +85,22 @@ export const SampleReportGate: React.FC<SampleReportGateProps> = ({ heading, bod
             Open the example feasibility
             <ArrowUpRight size={15} />
           </a>
+          {/* The same documents separately, for anyone who wants one part of it
+              rather than the whole pack. */}
+          <p className="text-[11px] text-thistle-black/40 mt-fl-4">Or open one part:</p>
+          <div className="flex flex-wrap justify-center gap-x-fl-3 gap-y-1 mt-1">
+            {SAMPLE_REPORT_PARTS.map((part) => (
+              <a
+                key={part.path}
+                href={part.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] text-thistle-black/55 underline underline-offset-2 hover:text-thistle-black transition-colors"
+              >
+                {part.label}
+              </a>
+            ))}
+          </div>
         </>
       ) : (
         <>
