@@ -30,6 +30,10 @@ const LEAD_ENDPOINT =
 // gets no autoresponse, which is the current behaviour for all of them.
 const FORM_BY_SOURCE: Record<string, string> = {
   'class-ma-checker': 'https://formspree.io/p/3042010600814149049/f/class-ma-checker',
+  // The example feasibility. Its autoresponse carries the link to the document,
+  // so the request is answered in seconds rather than by someone remembering to
+  // attach a file. See lib/sampleReport.ts and formspree.json.
+  'sample-report': 'https://formspree.io/p/3042010600814149049/f/sample-report',
 };
 
 // Where each gate's `source` came from, for a subject line the team can triage

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { pruneEmpty } from '../../lib/tina';
+import { SAMPLE_REPORT_PATH } from '../../lib/sampleReport';
 
 const emailOk = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 
@@ -15,7 +16,7 @@ const emailOk = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 // matching what the form has just done.
 const FALLBACK = {
   heading: 'Read a real report first.',
-  body: 'Enter your email and the team will send you a full sample feasibility document from a real project, with the client details removed.',
+  body: 'Enter your email and we will send you a full feasibility from a real project, with the client details removed. Fifteen pages: the overview, the planning research, the space standards and the sketch layout.',
   privacyNote: 'No spam. Just the report and one follow-up.',
 };
 
@@ -27,16 +28,20 @@ interface SampleReportGateProps {
   tina?: Partial<Record<'heading' | 'body' | 'privacyNote', string>>;
 }
 
-// Email-gated request for a sample feasibility document.
+// Email-gated download of the example feasibility.
 //
-// It used to reveal a download link on submit. The file behind it was the real
-// St John's report, with the client's address on every page, so it was the same
-// exposure as the per-study documents and it came down with them. Ed's decision
-// on the call was that an example is sent by the team and "that example would
-// have them hidden", so this now captures the address and hands off to a person.
+// History, because this has moved twice. It first revealed a download whose
+// file was the real St John's report, with the client's address on every page,
+// so it came down with the other per-study documents. It then captured the
+// address and handed off to a person, because no redacted example existed.
+// Ed sent one on 23 September 2026 (Claremont Road, client details out), so it
+// is a download again.
 //
-// It reveals nothing on success on purpose. When a redacted example exists,
-// this can go back to an instant download by restoring the link here.
+// Both at once, deliberately: the link appears on screen the moment the form is
+// submitted, and Formspree's autoresponse emails the same link. On screen
+// because nobody should wait on an email for something they just asked for; by
+// email because that is what makes the address worth giving, and it puts the
+// document somewhere they can find it next week.
 export const SampleReportGate: React.FC<SampleReportGateProps> = ({ heading, body, privacyNote, tina }) => {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'submitting' | 'done' | 'error'>('idle');
@@ -65,10 +70,21 @@ export const SampleReportGate: React.FC<SampleReportGateProps> = ({ heading, bod
     <div className="max-w-xl mx-auto mt-fl-7 bg-white rounded-2xl border border-thistle-black/[0.06] p-fl-6 text-center">
       {status === 'done' ? (
         <>
-          <p className="text-fluid-base text-thistle-black mb-fl-2">Thanks. That is with the team.</p>
-          <p className="text-fluid-sm text-thistle-black/55 leading-relaxed">
-            We will email you a full sample feasibility, with the client details removed, within one working day.
+          <p className="text-fluid-base text-thistle-black mb-fl-2">Here it is.</p>
+          <p className="text-fluid-sm text-thistle-black/55 leading-relaxed mb-fl-4">
+            A copy is on its way to your inbox as well, so you have it to hand later.
           </p>
+          {/* target and rel: the PDF opens in its own tab rather than taking the
+              page away, and noopener is the rule for any target="_blank". */}
+          <a
+            href={SAMPLE_REPORT_PATH}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-1.5 text-sm font-medium px-6 py-3 rounded-full bg-thistle-green text-thistle-black hover:bg-thistle-green/80 transition-colors"
+          >
+            Open the example feasibility
+            <ArrowUpRight size={15} />
+          </a>
         </>
       ) : (
         <>
@@ -90,7 +106,7 @@ export const SampleReportGate: React.FC<SampleReportGateProps> = ({ heading, bod
               disabled={!emailOk(email) || status === 'submitting'}
               className="inline-flex items-center justify-center gap-1.5 text-sm font-medium px-6 py-3 rounded-full bg-thistle-green text-thistle-black hover:bg-thistle-green/80 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
             >
-              {status === 'submitting' ? 'Sending…' : 'Request the sample'}
+              {status === 'submitting' ? 'Sending…' : 'Send me the example'}
               <ArrowUpRight size={15} />
             </button>
           </div>

@@ -32,6 +32,21 @@
           "message": "Thanks for using the Class MA checker.\n\nYour on-screen verdict is a quick screen, not a planning determination. Here are the prior-approval tests a Class MA application is actually judged on, and what each one needs evidence of:\n\n1. Transport and highways impact, particularly on the movement of goods.\n2. Contamination risk on the site.\n3. Flooding risk on the site.\n4. Natural light in every habitable room. This is the test that most often bites.\n5. Impact on the intended occupiers from nearby commercial uses.\n6. Loss of services such as health centres or nurseries, where relevant.\n7. Fire safety, where the building is above 18 metres.\n\nThe application fee is 260 pounds for each dwellinghouse and a decision usually takes up to 56 days.\n\nIf you want these tested properly against your building, a feasibility study gives you a Go or No-Go in five days for a fixed fee:\nhttps://www.thistlearchitecture.co.uk/feasibility-package\n\nThistle Architecture"
         }
       ]
+    },
+    "sample-report": {
+      "name": "Thistle Sample Feasibility",
+      "actions": [
+        {
+          "type": "email",
+          "to": "hello@thistlearchitecture.co.uk"
+        },
+        {
+          "type": "autoresponse",
+          "fromName": "Thistle Architecture",
+          "subject": "Your example feasibility: Claremont Road, seven-bed HMO",
+          "message": "Thanks for asking for the example.\n\nHere is a full Thistle feasibility, from a real project in Luton, with the client details removed:\nhttps://www.thistlearchitecture.co.uk/downloads/thistle-example-feasibility-claremont-road-9e72bfd0.pdf\n\nFifteen pages, in four parts: the feasibility overview, the planning research behind it, the space standards the rooms were tested against, and the sketch layout for a seven-bedroom HMO with a loft.\n\nIt is a two-stage scheme: a six-bedroom C4 HMO plus a rear dormer under permitted development, then a seventh bedroom by full planning. The overview sets out why it is phased that way.\n\nWorth saying plainly: the figures in it are indicative and specific to that building. Yours will differ.\n\nIf you want the same done on your own building, the fee is on screen before you commit:\nhttps://www.thistlearchitecture.co.uk/pricing\n\nReply to this email if you have a question about the document, and one of the team will pick it up.\n\nThistle Architecture"
+        }
+      ]
     }
   }
 }
