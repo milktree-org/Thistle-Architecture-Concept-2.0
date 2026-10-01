@@ -10,6 +10,8 @@ import { EVENTS, track } from '../../lib/analytics';
 import { DisclaimerAcceptance } from '../../components/checkout/DisclaimerAcceptance';
 import { PrivacyNote } from '../../components/ui/PrivacyNote';
 import { DISCLAIMER_VERSION } from '../../lib/disclaimer';
+import { PromoCodeField } from '../../components/checkout/PromoCodeField';
+import { normalisePromoCode, promoCodeLabel } from '../../lib/promoCode';
 
 // Ed's August 2026 final brief, section 03: "Bring the product choice and
 // short pricing calculator near the top. Use the same calculator component and
@@ -73,6 +75,8 @@ const AutomatedCheckout: React.FC = () => {
   // Unticked on every mount, nothing persists it. R2.3.
   const [accepted, setAccepted] = useState(false);
   const [disclaimerError, setDisclaimerError] = useState(false);
+  const [promo, setPromo] = useState('');
+  const [promoError, setPromoError] = useState(false);
 
   // The tick is deliberately NOT folded into `ready`. Leaving the button live
   // and refusing on click means the client is told what is missing, where a
@@ -81,10 +85,11 @@ const AutomatedCheckout: React.FC = () => {
 
   const submit = async () => {
     if (!ready) return;
-    if (!accepted) {
-      setDisclaimerError(true);
-      return;
-    }
+    const promoCode = normalisePromoCode(promo);
+    const promoBad = !!promoCode && !promoCodeLabel(promoCode);
+    setPromoError(promoBad);
+    if (!accepted) setDisclaimerError(true);
+    if (promoBad || !accepted) return;
     setDisclaimerError(false);
     setStatus('working');
 
@@ -104,7 +109,13 @@ const AutomatedCheckout: React.FC = () => {
     fetch('/api/leads', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, source: 'automated-checkout', Name: name, Phone: phone }),
+      body: JSON.stringify({
+        email,
+        source: 'automated-checkout',
+        Name: name,
+        Phone: phone,
+        ...(promoCode ? { 'Promo code': promoCode } : {}),
+      }),
     }).catch(() => {});
 
     try {
@@ -116,6 +127,7 @@ const AutomatedCheckout: React.FC = () => {
           email,
           name,
           phone,
+          promoCode,
           disclaimerAccepted: true,
           disclaimerVersion: DISCLAIMER_VERSION,
         }),
@@ -128,7 +140,8 @@ const AutomatedCheckout: React.FC = () => {
       // The server refused the tick. Unreachable via the button, but if the
       // two halves ever disagree the client sees the agreed wording.
       if (res.status === 422) {
-        setDisclaimerError(true);
+        if (data.field === 'promoCode') setPromoError(true);
+        else setDisclaimerError(true);
         setStatus('idle');
         return;
       }
@@ -175,6 +188,12 @@ const AutomatedCheckout: React.FC = () => {
       <PrivacyNote
         className="mb-fl-3"
         purpose="We use these details to deliver your report and to follow up about your project."
+      />
+      <PromoCodeField
+        value={promo}
+        onChange={(v) => { setPromo(v); setPromoError(false); }}
+        showError={promoError}
+        id="promo-automated"
       />
       {/* R2.1: same screen as the pay button, and above it. */}
       <DisclaimerAcceptance

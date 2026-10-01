@@ -41,5 +41,22 @@ ok('automated: no scheme row content', auto.Scheme === '');
 // An old session with no phone anywhere: falls back to Stripe, then empty.
 const old = buildCheckoutNotification({ id: 'cs_test_3', amount_total: 29800, metadata: { payment_type: 'deposit_50', fee_total: '298' }, customer_details: { phone: '+441234567890' } });
 ok('legacy: Stripe phone used when metadata has none', old.Phone === '+441234567890');
-assert.equal(Object.keys(deposit).length, 16);
+ok('no code: promo row is empty', deposit['Promo code'] === '');
+ok('no code: subject carries no tag', !deposit._subject.startsWith('['));
+
+// Founding 20, on each tier. The code marks the place; it never moves the amount.
+const f20Auto = buildCheckoutNotification({
+  id: 'cs_test_4', amount_total: 4999,
+  metadata: { payment_type: 'automated_full', name: 'B Person', promo_code: 'F20 (Founding 20)' },
+});
+ok('F20 automated: promo row names the offer', f20Auto['Promo code'] === 'F20 (Founding 20)');
+ok('F20 automated: subject is tagged', f20Auto._subject.startsWith('[F20] PAID Automated Site Feasibility: B Person'));
+ok('F20 automated: amount unchanged', f20Auto.Amount === '£49.99');
+const f20Dep = buildCheckoutNotification({
+  id: 'cs_test_5', amount_total: 14900,
+  metadata: { payment_type: 'deposit_50', fee_total: '298', name: 'C Person', promo_code: 'F20 (Founding 20)' },
+});
+ok('F20 deposit: subject is tagged', f20Dep._subject.startsWith('[F20] PAID feasibility deposit: C Person'));
+ok('F20 deposit: balance unchanged', f20Dep['Balance due'] === '£149');
+assert.equal(Object.keys(deposit).length, 17);
 console.log(`${n} checks passed`);

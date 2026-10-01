@@ -9,6 +9,8 @@ import { EVENTS, track, trackOnce } from '../../lib/analytics';
 import { DisclaimerAcceptance } from '../../components/checkout/DisclaimerAcceptance';
 import { PrivacyNote } from '../../components/ui/PrivacyNote';
 import { DISCLAIMER_ERROR, DISCLAIMER_VERSION } from '../../lib/disclaimer';
+import { PromoCodeField } from '../../components/checkout/PromoCodeField';
+import { normalisePromoCode, promoCodeLabel } from '../../lib/promoCode';
 import {
   getFeasibilityRoute,
   type ProjectInput,
@@ -189,15 +191,18 @@ export const FeasibilityCalculator: React.FC = () => {
   // the acceptance criteria check it survives a browser back.
   const [accepted, setAccepted] = useState(false);
   const [disclaimerError, setDisclaimerError] = useState(false);
+  const [promo, setPromo] = useState('');
+  const [promoError, setPromoError] = useState(false);
 
   const handleCheckout = async () => {
     // The browser half of the block. The server refuses too, which is the half
     // that counts, but stopping here means the client sees section 5.3 rather
-    // than a failed request.
-    if (!accepted) {
-      setDisclaimerError(true);
-      return;
-    }
+    // than a failed request. A mistyped promo code is held back the same way.
+    const promoCode = normalisePromoCode(promo);
+    const promoBad = !!promoCode && !promoCodeLabel(promoCode);
+    setPromoError(promoBad);
+    if (!accepted) setDisclaimerError(true);
+    if (promoBad || !accepted) return;
     setDisclaimerError(false);
     setCheckout('working');
     // Sent before the request, not after. The successful branch ends in a
@@ -224,6 +229,7 @@ export const FeasibilityCalculator: React.FC = () => {
           phone: a.phone,
           existingUse: a.existingUse,
           proposedUse: a.proposedUse,
+          promoCode,
           // Sent so the request records which wording was on screen, rather
           // than which wording happens to be deployed when it arrives.
           disclaimerAccepted: true,
@@ -239,7 +245,8 @@ export const FeasibilityCalculator: React.FC = () => {
       // is blocked above, but if the two ever disagree the client must see the
       // agreed wording rather than be sent to the contact page.
       if (res.status === 422) {
-        setDisclaimerError(true);
+        if (data.field === 'promoCode') setPromoError(true);
+        else setDisclaimerError(true);
         setCheckout('idle');
         return;
       }
@@ -344,6 +351,12 @@ export const FeasibilityCalculator: React.FC = () => {
                 <span className="font-semibold text-thistle-black">£{money(result.price / 2)}</span>. You then
                 complete your project brief, and the balance is due before your feasibility is delivered.
               </p>
+              <PromoCodeField
+                value={promo}
+                onChange={(v) => { setPromo(v); setPromoError(false); }}
+                showError={promoError}
+                id="promo-architectural"
+              />
               {/* R2.1: on the same screen as the pay button and ABOVE it. */}
               <DisclaimerAcceptance
                 checked={accepted}

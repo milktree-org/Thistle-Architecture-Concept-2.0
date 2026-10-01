@@ -26,10 +26,15 @@ export function buildCheckoutNotification(session: Record<string, any>, paidAt =
 
   const scheme = [meta.existing_use, meta.proposed_use].filter(Boolean).join(' to ');
 
+  // A promo code marks a Founding 20 place (lib/promoCode.ts). It goes at the
+  // front of the subject so the places can be counted from the inbox alone.
+  const promo = meta.promo_code ?? '';
+  const tag = promo ? `[${promo.split(' ')[0]}] ` : '';
+
   return {
     _subject: isAutomated
-      ? `PAID Automated Site Feasibility: ${meta.name || 'name not captured'} (£${amount ?? '?'})`
-      : `PAID feasibility ${isDeposit ? 'deposit' : ''}: ${meta.address || meta.name || 'not captured'} (£${amount ?? '?'})`,
+      ? `${tag}PAID Automated Site Feasibility: ${meta.name || 'name not captured'} (£${amount ?? '?'})`
+      : `${tag}PAID feasibility ${isDeposit ? 'deposit' : ''}: ${meta.address || meta.name || 'not captured'} (£${amount ?? '?'})`,
     Status: isAutomated
       ? 'Paid in full, awaiting detailed brief. No design review at this tier.'
       : isDeposit
@@ -49,6 +54,7 @@ export function buildCheckoutNotification(session: Record<string, any>, paidAt =
     'Base fee': meta.base ? `£${meta.base}` : '',
     'Complexity uplift': meta.uplift ? `£${meta.uplift}` : '',
     'Complexity factors': meta.factors ?? '',
+    'Promo code': promo,
     'Stripe session': session.id ?? '',
     'Paid at': paidAt.toISOString(),
   };

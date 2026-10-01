@@ -5,6 +5,7 @@ import {
   disclaimerAccepted,
   type DisclaimerAcceptance,
 } from '@/lib/disclaimer';
+import { PROMO_CODE_ERROR, normalisePromoCode, promoCodeLabel } from '@/lib/promoCode';
 
 export const runtime = 'nodejs';
 
@@ -46,6 +47,8 @@ interface CheckoutBody extends DisclaimerAcceptance {
   /** The calculator's two use answers, as typed on screen. For the paid notification only. */
   existingUse?: string;
   proposedUse?: string;
+  /** Optional. Marks a Founding 20 place; it never changes the price. */
+  promoCode?: string;
 }
 
 async function createSession(form: URLSearchParams, key: string) {
@@ -93,6 +96,18 @@ export async function POST(request: Request) {
     );
   }
 
+  // An unrecognised promo code is refused here as well as in the browser, for
+  // the same reason as the tick: a client who pays with a mistyped code would
+  // be left off the Founding 20 list with nobody noticing. An empty box is
+  // fine. A code never touches the amount; see lib/promoCode.ts.
+  const promoCode = normalisePromoCode(body.promoCode);
+  if (promoCode && !promoCodeLabel(promoCode)) {
+    return NextResponse.json(
+      { ok: false, error: PROMO_CODE_ERROR, field: 'promoCode' },
+      { status: 422 },
+    );
+  }
+
   const key = process.env.STRIPE_SECRET_KEY;
 
   // --- Automated Site Feasibility: flat £49.99, paid in full -----------------
@@ -121,6 +136,7 @@ export async function POST(request: Request) {
       'metadata[phone]': (body.phone ?? '').slice(0, 60),
     });
     if (body.email) form.set('customer_email', body.email);
+    if (promoCode) form.set('metadata[promo_code]', `${promoCode} (${promoCodeLabel(promoCode)})`);
 
     try {
       const url = await createSession(form, key);
@@ -193,6 +209,7 @@ export async function POST(request: Request) {
     'metadata[proposed_use]': (body.proposedUse ?? '').slice(0, 200),
   });
   if (body.email) form.set('customer_email', body.email);
+  if (promoCode) form.set('metadata[promo_code]', `${promoCode} (${promoCodeLabel(promoCode)})`);
 
   try {
     const url = await createSession(form, key);
